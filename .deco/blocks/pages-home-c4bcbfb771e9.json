@@ -11,14 +11,14 @@
       "__resolveType": "site/sections/Images/Carousel.tsx",
       "images": [
         {
-          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/e5b17750-7164-45a5-9d3a-68076ab407db",
-          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/f50d5ec4-c329-44c0-b504-f74155260d41",
+          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/c8d9eeae-bc3f-4d21-8146-264f4df1c984",
+          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/0a953472-5b43-4e9e-9bae-2d24bca540a9",
           "alt": "valentines",
           "action": {
-            "title": "Valentine's Day",
-            "subTitle": "Celebrate Love with Our Exclusive Offers",
             "href": "#",
-            "label": "Enjoy!"
+            "title": " ",
+            "subTitle": " ",
+            "label": " "
           }
         },
         {
