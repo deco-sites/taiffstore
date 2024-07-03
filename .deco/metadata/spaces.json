@@ -1065,7 +1065,8 @@
           "width": 30,
           "id": "%2F.deco%2Fblocks%2Fdeco-vtex.json::Properties::list::Properties::%7B%7D",
           "state": {
-            "__signal": null
+            "__signal": null,
+            "value": null
           }
         },
         "%2F.deco%2Fblocks%2Fdeco-vtex.json::Preview::visibility::Preview::%7B%7D": {

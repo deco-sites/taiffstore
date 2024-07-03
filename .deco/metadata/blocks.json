@@ -138,5 +138,9 @@
   "/.deco/blocks/deco-vtex.json": {
     "blockType": "apps",
     "__resolveType": "site/apps/deco/vtex.ts"
+  },
+  "/.deco/blocks/deco-shopify.json": {
+    "blockType": "apps",
+    "__resolveType": "site/apps/deco/shopify.ts"
   }
 }
