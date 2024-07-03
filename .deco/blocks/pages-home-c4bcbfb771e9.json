@@ -36,14 +36,13 @@
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "Make Mom's day",
-      "cta": "/mono",
+      "title": "teste",
+      "cta": "/teste",
       "products": {
         "__resolveType": "shopify/loaders/ProductList.ts",
         "props": {
-          "sort": "",
-          "query": "accessories",
-          "count": 12
+          "fuzzy": "automatic",
+          "ids": []
         },
         "filters": {
           "tags": [],

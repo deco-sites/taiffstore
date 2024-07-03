@@ -115,18 +115,6 @@
     "blockType": "loaders",
     "__resolveType": "site/loaders/Layouts/ProductCard.tsx"
   },
-  "/.deco/blocks/deco-htmx.json": {
-    "blockType": "apps",
-    "__resolveType": "site/apps/deco/htmx.ts"
-  },
-  "/.deco/blocks/deco-analytics.json": {
-    "blockType": "apps",
-    "__resolveType": "site/apps/deco/analytics.ts"
-  },
-  "/.deco/blocks/deco-shopify.json": {
-    "blockType": "apps",
-    "__resolveType": "site/apps/deco/shopify.ts"
-  },
   "/.deco/blocks/Deco.json": {
     "blockType": "sections",
     "__resolveType": "site/sections/Theme/Theme.tsx"
@@ -142,5 +130,17 @@
   "/.deco/blocks/deco-vtex.json": {
     "blockType": "apps",
     "__resolveType": "site/apps/deco/vtex.ts"
+  },
+  "/.deco/blocks/deco-shopify.json": {
+    "blockType": "apps",
+    "__resolveType": "site/apps/deco/shopify.ts"
+  },
+  "/.deco/blocks/deco-htmx.json": {
+    "blockType": "apps",
+    "__resolveType": "site/apps/deco/htmx.ts"
+  },
+  "/.deco/blocks/deco-analytics.json": {
+    "blockType": "apps",
+    "__resolveType": "site/apps/deco/analytics.ts"
   }
 }

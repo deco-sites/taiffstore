@@ -37,3 +37,43 @@
     --dot-progress: 100%
   }
 }
+
+/* ALERTAS HEADER  */
+
+.alertas-cy-item{
+  p{
+    display: flex;
+    width: max-content;
+    gap: 5px;
+    margin-left: 5px;
+  }
+}
+.animate-alerts {
+  animation: alerts 10s linear infinite;
+}
+@keyframes alerts {
+
+  0% {
+    transform: translateX(105%);
+  }
+
+  100% {
+    transform: translateX(-105%);
+  }
+}
+/* FIM ALERTAS HEADER */
+
+/* MENU MOBILE HEADER */
+
+.collapse-plus > .collapse-title:after{
+  content: '';
+}
+
+li.highlight{
+  background-color: black;
+  .collapse-title{
+    color: white;
+  }
+}
+
+/* FIM MENU MOBILE HEADER */

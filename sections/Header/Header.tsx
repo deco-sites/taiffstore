@@ -88,7 +88,7 @@ const Desktop = (
         >
           <Icon id="search" />
           <span class="text-base-300 truncate">
-            O que você procura?
+            Search products, brands...
           </span>
         </label>
 
@@ -125,7 +125,7 @@ const Mobile = ({ logo, searchbar }: Props) => (
     <Drawer
       id={SIDEMENU_DRAWER_ID}
       aside={
-        <Drawer.Aside title="Menu" drawer={SIDEMENU_DRAWER_ID}>
+        <Drawer.Aside title="Área do cliente" drawer={SIDEMENU_DRAWER_ID}>
           <div
             id={SIDEMENU_CONTAINER_ID}
             class="h-full flex items-center justify-center"
@@ -138,52 +138,59 @@ const Mobile = ({ logo, searchbar }: Props) => (
     />
 
     <div
-      class="grid place-items-center w-screen px-5 gap-4"
+      class="flex justify-between items-center w-screen px-5 gap-4 bg-black rounded-br-[10px] rounded-bl-[10px] shadow-blg"
       style={{
-        height: NAVBAR_HEIGHT_MOBILE,
-        gridTemplateColumns:
-          "min-content auto min-content min-content min-content",
+        height: NAVBAR_HEIGHT_MOBILE
       }}
     >
-      <label
-        for={SIDEMENU_DRAWER_ID}
-        class="btn btn-square btn-sm btn-ghost"
-        aria-label="open menu"
-        hx-target={`#${SIDEMENU_CONTAINER_ID}`}
-        hx-swap="outerHTML"
-        hx-trigger="click once"
-        hx-get={useSection({ props: { variant: "menu" } })}
-      >
-        <Icon id="menu" />
-      </label>
-
-      {logo && (
-        <a
-          href="/"
-          class="flex-grow inline-flex items-center justify-center"
-          style={{ minHeight: NAVBAR_HEIGHT_MOBILE }}
-          aria-label="Store logo"
+      <div>
+        <label
+          for={SIDEMENU_DRAWER_ID}
+          class="btn btn-square btn-sm btn-ghost"
+          aria-label="open menu"
+          hx-target={`#${SIDEMENU_CONTAINER_ID}`}
+          hx-swap="outerHTML"
+          hx-trigger="click once"
+          hx-get={useSection({ props: { variant: "menu" } })}
         >
-          <Image
-            src={logo.src}
-            alt={logo.alt}
-            width={logo.width || 100}
-            height={logo.height || 13}
-          />
-        </a>
-      )}
-
-      <label
-        for={SEARCHBAR_DRAWER_ID}
-        class="btn btn-square btn-sm btn-ghost"
-        aria-label="search icon button"
-      >
-        <Icon id="search" />
-      </label>
-
-      <SignIn variant="mobile" />
-
-      <Bag />
+          <Icon
+            width={30}
+            heigth={20}
+           id="hamburguerMenu" />
+        </label>
+      </div>
+      <div>
+        <label
+          for={SEARCHBAR_DRAWER_ID}
+          class="btn btn-square btn-sm btn-ghost"
+          aria-label="search icon button"
+        >
+          <Icon id="searchLens" />
+        </label>
+      </div>
+      <div>
+        {logo && (
+          <a
+            href="/"
+            class="flex items-center justify-center"
+            style={{ minHeight: NAVBAR_HEIGHT_MOBILE }}
+            aria-label="Store logo"
+          >
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              width={logo.width || 100}
+              height={logo.height || 13}
+            />
+          </a>
+        )}
+      </div>
+      <div>
+        <SignIn variant="mobile" />
+      </div>
+      <div>
+        <Bag />
+      </div>
     </div>
   </>
 );
@@ -216,7 +223,7 @@ function Header({
       hx-target="closest section"
       hx-swap="outerHTML"
     >
-      <div class="bg-base-100 fixed w-full z-40">
+      <div class="bg-black fixed w-full z-40">
         {alerts.length > 0 && <Alert alerts={alerts} />}
         {device === "desktop"
           ? <Desktop logo={logo} {...props} />

@@ -86,11 +86,11 @@ function Aside(
       style={{ maxWidth: "100vw" }}
     >
       <div class="flex justify-between items-center">
-        <h1 class="px-4 py-3">
-          <span class="font-medium text-2xl">{title}</span>
+        <h1 class={drawer === "searchbar-drawer" ? 'hidden' : 'px-4 py-3'}>
+          <span class="text-large font-normal leading-[25px] text-black">{title}</span>
         </h1>
-        <label for={drawer} aria-label="X" class="btn btn-ghost">
-          <Icon id="close" />
+        <label for={drawer} aria-label="X" class={`btn btn-ghost absolute right-0 ${drawer === "searchbar-drawer"? 'top-[26px]' : ''}`}>
+          <Icon id="closeBtn" width={25} height={24}/>
         </label>
       </div>
       {children}

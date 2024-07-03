@@ -48,11 +48,11 @@
   ],
   "caching": {
     "directives": []
-  },
-  "commerce": {
+  "platform": "custom",
+
     "platform": "other"
-  },
-  "platform": "shopify",
+   "platform": "vshopify,
+,
   "__resolveType": "site/apps/site.ts",
   "firstByteThresholdMS": true,
   "abTesting": {

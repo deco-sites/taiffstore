@@ -30,7 +30,7 @@ export interface SearchbarProps {
   /**
    * @title Placeholder
    * @description Search bar default placeholder message
-   * @default What are you looking for?
+   * @default O que está procurando?
    */
   placeholder?: string;
 
@@ -73,30 +73,30 @@ const script = (formId: string, name: string, popupId: string) => {
 const Suggestions = import.meta.resolve("./Suggestions.tsx");
 
 export default function Searchbar(
-  { placeholder = "What are you looking for?", loader }: SearchbarProps,
+  { placeholder = "O que está procurando?", loader }: SearchbarProps,
 ) {
   const slot = useId();
 
   return (
     <div
-      class="w-full grid gap-8 px-4 py-6"
+      class="w-full grid gap-8 px-2.5 pt-[28px] "
       style={{ gridTemplateRows: "min-content auto" }}
     >
-      <form id={SEARCHBAR_INPUT_FORM_ID} action={ACTION} class="join">
+      <form id={SEARCHBAR_INPUT_FORM_ID} action={ACTION} class="join max-w-[306px] border border-[#606060] border-solid rounded-[4px]">
         <button
           type="submit"
-          class="btn join-item btn-square no-animation"
+          class="btn join-item btn-square no-animation min-h-[40px] h-[40px]"
           aria-label="Search"
           for={SEARCHBAR_INPUT_FORM_ID}
           tabIndex={-1}
         >
           <span class="loading loading-spinner loading-xs hidden [.htmx-request_&]:inline" />
-          <Icon id="search" class="inline [.htmx-request_&]:hidden" />
+          <Icon id="searchLensNew" width={15} heigth={15} class="inline [.htmx-request_&]:hidden" />
         </button>
         <input
           autoFocus
           tabIndex={0}
-          class="input input-bordered join-item flex-grow"
+          class="input join-item flex-grow h-[40px] text-base font-normal leading-[17.5px] text-gray"
           name={NAME}
           placeholder={placeholder}
           autocomplete="off"
