@@ -123,10 +123,6 @@
     "blockType": "apps",
     "__resolveType": "site/apps/deco/analytics.ts"
   },
-  "/.deco/blocks/deco-shopify.json": {
-    "blockType": "apps",
-    "__resolveType": "site/apps/deco/shopify.ts"
-  },
   "/.deco/blocks/Deco.json": {
     "blockType": "sections",
     "__resolveType": "site/sections/Theme/Theme.tsx"
