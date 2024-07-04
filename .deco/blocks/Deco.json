@@ -12,6 +12,23 @@
       {
         "variations": [
           {
+            "weight": "300"
+          },
+          {
+            "weight": "500"
+          },
+          {
+            "weight": "400"
+          },
+          {
+            "weight": "700"
+          }
+        ],
+        "family": "Quicksand"
+      },
+      {
+        "variations": [
+          {
             "weight": "400"
           },
           {

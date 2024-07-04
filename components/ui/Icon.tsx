@@ -26,6 +26,10 @@ export type AvailableIcons =
   | "heartMenu"
   | "closeBtn"
   | "searchLensNew"
+  | "chevronRightWhite"
+  | "chevronLeftWhite"
+  | "minusSign"
+  | "plusSign"
   | "trash";
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {

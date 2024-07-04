@@ -31,7 +31,16 @@ export default {
       "black-1": "#1E1E1E",
       "black-2": "#3E3E894D",
       "gray": "#D6D6D6",
-      "white": "#FFFFFF"
+      "gray-2": "#494949",
+      "gray-3": "#242424",
+      "gray-4": "#EAEAEA",
+      "gray-5": "#8E8E93",
+      "gray-6": "#7D7D7D",
+      "gray-7": "#CECECE",
+      "gray-8": "#545454",
+      "gray-9": "#707070",
+      "white": "#FFFFFF",
+      "blue-1": "#2B07E2"
     },
     fontFamily: {
       quicksand: "Quicksand, sans-serif",

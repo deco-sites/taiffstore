@@ -82,14 +82,14 @@ function Aside(
   return (
     <div
       data-aside
-      class="bg-base-100 grid grid-rows-[auto_1fr] h-full divide-y"
+      class="bg-base-100 grid grid-rows-[auto_1fr] h-full "
       style={{ maxWidth: "100vw" }}
     >
       <div class="flex justify-between items-center">
-        <h1 class={drawer === "searchbar-drawer" ? 'hidden' : 'px-4 py-3'}>
-          <span class="text-large font-normal leading-[25px] text-black">{title}</span>
+        <h1 class={drawer === "searchbar-drawer" ? 'hidden' : 'px-5 pb-3 pt-8'}>
+          <span class={drawer === "minicart-drawer" ? `text-[28px]  font-bold leading-[35px] text-black` : `text-large font-normal leading-[25px] text-black`}>{title}</span>
         </h1>
-        <label for={drawer} aria-label="X" class={`btn btn-ghost absolute right-0 ${drawer === "searchbar-drawer"? 'top-[26px]' : ''}`}>
+        <label for={drawer} aria-label="X" class={`btn btn-ghost absolute right-8 top-5 ${drawer === "searchbar-drawer"? 'top-[26px] !right-0' : '' } ${drawer === "minicart-drawer" ? "top-[26px]" : ""}`}>
           <Icon id="closeBtn" width={25} height={24}/>
         </label>
       </div>

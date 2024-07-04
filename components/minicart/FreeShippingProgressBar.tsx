@@ -16,8 +16,7 @@ function FreeShippingProgressBar({ target, total, currency, locale }: Props) {
 
   return (
     <div class="flex flex-col w-full gap-2">
-      <div class="flex justify-center items-center gap-2 text-primary">
-        <Icon id="local_shipping" size={24} />
+      <div class="flex justify-start items-center gap-2 text-[13px] font-normal leading-[16.25px] text-black ">
         {remaining > 0
           ? (
             <label for={id}>
@@ -29,7 +28,7 @@ function FreeShippingProgressBar({ target, total, currency, locale }: Props) {
       </div>
       <progress
         id={id}
-        class="progress progress-primary w-full"
+        class="progress progress-primary w-full bg-gray-4"
         value={percent}
         max={100}
       />

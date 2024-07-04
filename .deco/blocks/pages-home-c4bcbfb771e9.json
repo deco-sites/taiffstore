@@ -36,19 +36,13 @@
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "teste",
-      "cta": "/teste",
       "products": {
-        "__resolveType": "shopify/loaders/ProductList.ts",
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
         "props": {
+          "sort": "price:asc",
+          "count": 4,
           "fuzzy": "automatic",
-          "ids": []
-        },
-        "filters": {
-          "tags": [],
-          "productTypes": [],
-          "productVendors": [],
-          "variantOptions": []
+          "collection": "138"
         }
       }
     },
@@ -138,17 +132,11 @@
       "tabs": [
         {
           "products": {
-            "__resolveType": "shopify/loaders/ProductList.ts",
+            "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
             "props": {
               "sort": "",
-              "query": "Shirts",
-              "count": 10
-            },
-            "filters": {
-              "tags": [],
-              "productTypes": [],
-              "productVendors": [],
-              "variantOptions": []
+              "count": 10,
+              "collection": "138"
             }
           },
           "title": "Fashion"

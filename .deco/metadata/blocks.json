@@ -131,10 +131,6 @@
     "blockType": "apps",
     "__resolveType": "site/apps/deco/vtex.ts"
   },
-  "/.deco/blocks/deco-shopify.json": {
-    "blockType": "apps",
-    "__resolveType": "site/apps/deco/shopify.ts"
-  },
   "/.deco/blocks/deco-htmx.json": {
     "blockType": "apps",
     "__resolveType": "site/apps/deco/htmx.ts"
@@ -142,5 +138,9 @@
   "/.deco/blocks/deco-analytics.json": {
     "blockType": "apps",
     "__resolveType": "site/apps/deco/analytics.ts"
+  },
+  "/.deco/blocks/deco-shopify.json": {
+    "blockType": "apps",
+    "__resolveType": "site/apps/deco/shopify.ts"
   }
 }
