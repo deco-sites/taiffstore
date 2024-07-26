@@ -79,13 +79,13 @@ export default function Searchbar(
 
   return (
     <div
-      class="w-full grid gap-8 px-2.5 pt-[28px] "
+      class="w-full grid gap-8 pt-[28px] px-[66px] py-[36px] full-phone:px-0 "
       style={{ gridTemplateRows: "min-content auto" }}
     >
-      <form id={SEARCHBAR_INPUT_FORM_ID} action={ACTION} class="join max-w-[306px] border border-[#606060] border-solid rounded-[4px]">
+      <form id={SEARCHBAR_INPUT_FORM_ID} action={ACTION} class="join max-w-[677px] border border-black border-solid rounded-[50px] mx-auto w-full full-tablet:max-w-full full-phone:rounded-none full-phone:border-none full-phone:px-2.5">
         <button
           type="submit"
-          class="btn join-item btn-square no-animation min-h-[40px] h-[40px]"
+          class="btn join-item btn-square no-animation min-h-[40px] h-[40px] !bg-white full-phone:border-t full-phone:border-t-black full-phone:border-solid full-phone:border-b full-phone:border-b-black full-phone:border-l full-phone:border-l-black"
           aria-label="Search"
           for={SEARCHBAR_INPUT_FORM_ID}
           tabIndex={-1}
@@ -96,7 +96,7 @@ export default function Searchbar(
         <input
           autoFocus
           tabIndex={0}
-          class="input join-item flex-grow h-[40px] text-base font-normal leading-[17.5px] text-gray"
+          class="!rounded-[50px] focus:!border-none  focus:!border-transparent border-none input join-item flex-grow h-[40px] text-base font-normal leading-[17.5px] text-gray input-searchbar full-phone:max-w-[270px] full-phone:border-r full-phone:border-solid full-phone:border-black full-phone:!rounded-none full-phone:border-l-0 full-phone:px-0 full-phone:w-[270px] full-phone:border-t full-phone:border-t-black full-phone:border-b full-phone:border-b-black"
           name={NAME}
           placeholder={placeholder}
           autocomplete="off"
@@ -110,7 +110,7 @@ export default function Searchbar(
         />
         <label
           type="button"
-          class="join-item btn btn-ghost btn-square hidden sm:inline-flex no-animation"
+          class="join-item btn btn-ghost btn-square no-animation hidden"
           for={SEARCHBAR_POPUP_ID}
           aria-label="Toggle searchbar"
         >

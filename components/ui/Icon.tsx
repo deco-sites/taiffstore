@@ -30,6 +30,12 @@ export type AvailableIcons =
   | "chevronLeftWhite"
   | "minusSign"
   | "plusSign"
+  | "heartWhite"
+  | "nwUser"
+  | "nwEmail"
+  | "rightArrowShelf"
+  | "leftArrowShelf"
+  | "heartShelf"
   | "trash";
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {

@@ -82,15 +82,15 @@ function Aside(
   return (
     <div
       data-aside
-      class="bg-base-100 grid grid-rows-[auto_1fr] h-full "
+      class="bg-base-100 grid grid-rows-[auto_1fr] h-full full-tablet:max-w-[100vw] full-tablet:w-full full-tablet:max-h-[600px] full-tablet:rounded-bl-[10px] full-tablet:rounded-br-[10px] full-tablet:mx-[auto] full-tablet:my-[0] full-phone:w-full"
       style={{ maxWidth: "100vw" }}
     >
       <div class="flex justify-between items-center">
         <h1 class={drawer === "searchbar-drawer" ? 'hidden' : 'px-5 pb-3 pt-8'}>
           <span class={drawer === "minicart-drawer" ? `text-[28px]  font-bold leading-[35px] text-black` : `text-large font-normal leading-[25px] text-black`}>{title}</span>
         </h1>
-        <label for={drawer} aria-label="X" class={`btn btn-ghost absolute right-8 top-5 ${drawer === "searchbar-drawer"? 'top-[26px] !right-0' : '' } ${drawer === "minicart-drawer" ? "top-[26px]" : ""}`}>
-          <Icon id="closeBtn" width={25} height={24}/>
+        <label for={drawer} aria-label="X" class={`btn btn-ghost absolute right-8 top-5 ${drawer === "searchbar-drawer" ? 'top-[26px] !right-0 full-tablet:!right-[5px]' : ''} ${drawer === "minicart-drawer" ? "top-[26px]" : ""}`}>
+          <Icon id="closeBtn" width={25} height={24} />
         </label>
       </div>
       {children}

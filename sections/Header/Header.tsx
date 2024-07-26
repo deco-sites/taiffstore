@@ -61,46 +61,50 @@ const Desktop = (
   <>
     <Modal id={SEARCHBAR_POPUP_ID}>
       <div
-        class="absolute top-0 bg-base-100 container"
-        style={{ marginTop: HEADER_HEIGHT_MOBILE }}
+        class="absolute top-0 bg-base-100 container max-w-[854px] mt-6 rounded-bl-[10px] rounded-br-[10px] cy-header"
       >
         <Searchbar {...searchbar} />
       </div>
     </Modal>
 
-    <div class="flex flex-col gap-4 pt-5 container border-b border-gray-300">
-      <div class="grid grid-cols-3 place-items-center">
-        <div class="place-self-start">
-          <a href="/" aria-label="Store logo">
+    <div class="flex flex-col  pt-5 container border-b border-gray-300">
+      <div class="flex justify-center w-full items-center">
+        <div class="place-self-start mr-[120px]">
+          <a href="/" aria-label="Store logo" class="cy-header-logo">
             <Image
               src={logo.src}
               alt={logo.alt}
-              width={logo.width || 100}
-              height={logo.height || 23}
+              width={174}
+              height={53}
             />
           </a>
         </div>
 
         <label
           for={SEARCHBAR_POPUP_ID}
-          class="input input-bordered flex items-center gap-2 w-full"
+          class="input input-bordered flex items-center gap-2 w-full max-w-[600px] max-h-[30px] cy-searchbar-popup"
           aria-label="search icon button"
         >
-          <Icon id="search" />
+          <Icon id="searchLensNew" width={16} height={17} strokeWidth={1} />
           <span class="text-base-300 truncate">
-            Search products, brands...
+            O que você procura?
           </span>
         </label>
 
-        <div class="flex gap-4 place-self-end">
+        <div class="flex gap-[50px] ml-[60px] items-center">
+          <div>
+            <a href="/account/whishlist cy-icon-favoritos">
+              <Icon id="heartWhite" width={34} height={30} />
+            </a>
+          </div>
           <SignIn variant="desktop" />
           <Bag />
         </div>
       </div>
 
-      <div class="flex justify-between items-center text-base-300">
-        <ul class="flex">
-          {navItems?.slice(0, 4).map((item) => <NavItem item={item} />)}
+      <div class="flex justify-center items-center text-white">
+        <ul class="flex cy-navbar">
+          {navItems?.map((item, index) => <NavItem item={item} index={index} />)}
         </ul>
         <div>
           {/* ship to */}
@@ -110,13 +114,15 @@ const Desktop = (
   </>
 );
 
+
+
 const Mobile = ({ logo, searchbar }: Props) => (
   <>
     <Drawer
       id={SEARCHBAR_DRAWER_ID}
       aside={
         <Drawer.Aside title="Search" drawer={SEARCHBAR_DRAWER_ID}>
-          <div class="w-screen overflow-y-auto">
+          <div class="w-full overflow-y-auto">
             <Searchbar {...searchbar} />
           </div>
         </Drawer.Aside>
@@ -138,41 +144,44 @@ const Mobile = ({ logo, searchbar }: Props) => (
     />
 
     <div
-      class="flex justify-between items-center w-screen px-5 gap-4 bg-black rounded-br-[10px] rounded-bl-[10px] shadow-blg"
+      class="flex justify-between items-center w-full bg-black rounded-br-[10px] rounded-bl-[10px] shadow-blg sm-tablet:px-[10%] lg-tablet:px-40 full-phone:px-5 full-phone:gap-5"
       style={{
         height: NAVBAR_HEIGHT_MOBILE
       }}
     >
-      <div>
-        <label
-          for={SIDEMENU_DRAWER_ID}
-          class="btn btn-square btn-sm btn-ghost"
-          aria-label="open menu"
-          hx-target={`#${SIDEMENU_CONTAINER_ID}`}
-          hx-swap="outerHTML"
-          hx-trigger="click once"
-          hx-get={useSection({ props: { variant: "menu" } })}
-        >
-          <Icon
-            width={30}
-            heigth={20}
-           id="hamburguerMenu" />
-        </label>
+      <div class="flex gap-[50px] full-phone:gap-8">
+        <div>
+          <label
+            for={SIDEMENU_DRAWER_ID}
+            class="btn btn-square btn-sm btn-ghost"
+            aria-label="open menu"
+            hx-target={`#${SIDEMENU_CONTAINER_ID}`}
+            hx-swap="outerHTML"
+            hx-trigger="click once"
+            hx-get={useSection({ props: { variant: "menu" } })}
+          >
+            <Icon
+              width={30}
+              heigth={20}
+              id="hamburguerMenu" />
+          </label>
+        </div>
+        <div>
+          <label
+            for={SEARCHBAR_DRAWER_ID}
+            class="btn btn-square btn-sm btn-ghost"
+            aria-label="search icon button"
+          >
+            <Icon id="searchLens" />
+          </label>
+        </div>
       </div>
-      <div>
-        <label
-          for={SEARCHBAR_DRAWER_ID}
-          class="btn btn-square btn-sm btn-ghost"
-          aria-label="search icon button"
-        >
-          <Icon id="searchLens" />
-        </label>
-      </div>
+
       <div>
         {logo && (
           <a
             href="/"
-            class="flex items-center justify-center"
+            class="flex items-center justify-center full-phone:w-[108px] cy-header-logo"
             style={{ minHeight: NAVBAR_HEIGHT_MOBILE }}
             aria-label="Store logo"
           >
@@ -185,11 +194,13 @@ const Mobile = ({ logo, searchbar }: Props) => (
           </a>
         )}
       </div>
-      <div>
-        <SignIn variant="mobile" />
-      </div>
-      <div>
-        <Bag />
+      <div class="flex gap-[50px] full-phone:gap-8">
+        <div>
+          <SignIn variant="mobile" />
+        </div>
+        <div>
+          <Bag />
+        </div>
       </div>
     </div>
   </>
@@ -225,9 +236,13 @@ function Header({
     >
       <div class="bg-black fixed w-full z-40">
         {alerts.length > 0 && <Alert alerts={alerts} />}
-        {device === "desktop"
-          ? <Desktop logo={logo} {...props} />
-          : <Mobile logo={logo} {...props} />}
+        <div class="full-phone:hidden full-tablet:hidden full-desktop:block shadow-blg">
+          <Desktop logo={logo} {...props} />
+        </div>
+        <div class="all-mobile:block full-desktop:hidden">
+          <Mobile logo={logo} {...props} />
+        </div>
+
       </div>
     </header>
   );

@@ -212,7 +212,7 @@ export default function Cart({
 
                 {/* Cart Footer */}
                 <footer class="w-full">
-                  <div class="mb-8 ml-5 text-big font-normal leading-[25px] text-black">
+                  <div class="mb-8 ml-5 text-big font-normal leading-[25px] text-black pt-5">
                     Resumo do pedido
                   </div>
                   {/* Subtotal */}

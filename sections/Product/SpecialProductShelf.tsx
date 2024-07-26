@@ -1,6 +1,6 @@
 import type { Product } from "apps/commerce/types.ts";
 import { mapProductToAnalyticsItem } from "apps/commerce/utils/productToAnalyticsItem.ts";
-import ProductSlider from "../../components/product/ProductSlider.tsx";
+import ProductSlider from "../../components/product/SpecialProductSlider.tsx";
 import Section, {
   Props as SectionHeaderProps,
 } from "../../components/ui/Section.tsx";
@@ -11,7 +11,7 @@ export interface Props extends SectionHeaderProps {
   products: Product[] | null;
 }
 
-export default function ProductShelf({ products, title, cta }: Props) {
+export default function SpecialProductShelf({ products, title, cta }: Props) {
   if (!products || products.length === 0) {
     return null;
   }
@@ -36,7 +36,7 @@ export default function ProductShelf({ products, title, cta }: Props) {
   return (
     <Section.Container
       {...viewItemListEvent}
-      class="[view-transition-name:loading-fallback-2] max-w-[1280px] cy-product-shelf"
+      class="[view-transition-name:loading-fallback-2] max-w-[860px]  full-phone:max-w-full"
     >
       <Section.Header title={title} cta={cta} />
 

@@ -99,7 +99,7 @@
   },
   "/.deco/blocks/pages-productpage-ce4850591828.json": {
     "name": "Product Page",
-    "path": "/products/:slug",
+    "path": "/:slug/p",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
   },
@@ -142,5 +142,13 @@
   "/.deco/blocks/deco-shopify.json": {
     "blockType": "apps",
     "__resolveType": "site/apps/deco/shopify.ts"
+  },
+  "/.deco/blocks/Preview%20site%2Fsections%2FContent%2FBenefits.tsx.json": {
+    "blockType": "sections",
+    "__resolveType": "site/sections/Content/Benefits.tsx"
+  },
+  "/.deco/blocks/Preview%20%2Fsections%2FProduct%2FSpecialProductShelf.tsx.json": {
+    "blockType": "sections",
+    "__resolveType": "site/sections/Product/SpecialProductShelf.tsx"
   }
 }

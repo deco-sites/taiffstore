@@ -48,6 +48,7 @@ export interface Props {
 
 function BannerItem(
   { image, lcp }: { image: Banner; lcp?: boolean },
+  index: number
 ) {
   const {
     alt,
@@ -72,7 +73,7 @@ function BannerItem(
       {...selectPromotionEvent}
       href={action?.href ?? "#"}
       aria-label={action?.label}
-      class="relative block overflow-y-hidden w-full"
+      class={`relative block overflow-y-hidden w-full cy-carousel-banner-item cy-carousel-banner-item-${index}`}
     >
 
       <Picture preload={lcp} {...viewPromotionEvent}>
@@ -87,11 +88,11 @@ function BannerItem(
           media="(min-width: 768px)"
           fetchPriority={lcp ? "high" : "auto"}
           src={desktop}
-          width={1440}
-          height={600}
+          width={1920}
+          height={500}
         />
         <img
-          class="object-cover w-full h-full"
+          class="w-full h-full max-h-[500px]"
           loading={lcp ? "eager" : "lazy"}
           src={desktop}
           alt={alt}
@@ -112,14 +113,14 @@ function Carousel({ images = [], preload, interval }: Props) {
         "grid-rows-[1fr_32px_1fr_64px]",
         "grid-cols-[32px_1fr_32px]",
         "sm:grid-cols-[112px_1fr_112px] sm:min-h-min",
-        "w-screen",
+        "w-full",
       )}
     >
       <div class="col-span-full row-span-full">
-        <Slider class="carousel carousel-center w-full gap-6">
+        <Slider class="carousel carousel-center w-full gap-6 cy-carousel-banner">
           {images.map((image, index) => (
             <Slider.Item index={index} class="carousel-item w-full">
-              <BannerItem image={image} lcp={index === 0 && preload} />
+              <BannerItem image={image} index={index} lcp={index === 0 && preload} />
             </Slider.Item>
           ))}
         </Slider>
@@ -130,7 +131,7 @@ function Carousel({ images = [], preload, interval }: Props) {
           class="btn bg-transparent border-none btn-sm"
           disabled={false}
         >
-          <Icon id="chevronLeftWhite" width={15} height={33}  />
+          <Icon id="chevronLeftWhite" width={15} height={33} />
         </Slider.PrevButton>
       </div>
 
@@ -146,7 +147,7 @@ function Carousel({ images = [], preload, interval }: Props) {
       <ul
         class={clx(
           "col-span-full row-start-5 z-10 mt-2",
-          "carousel justify-center gap-3",
+          "carousel justify-center",
         )}
       >
         {images.map((_, index) => (
@@ -155,7 +156,7 @@ function Carousel({ images = [], preload, interval }: Props) {
               index={index}
               class={clx(
                 "bg-gray-2 h-1 w-[60px] no-animation rounded-full",
-                "disabled:w-8 disabled:bg-base-100 disabled:opacity-100 transition-[width]",
+                "disabled:w-[60px] disabled:bg-base-100 disabled:opacity-100 transition-[width]",
               )}
             >
             </Slider.Dot>

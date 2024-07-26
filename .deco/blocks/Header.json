@@ -4,20 +4,24 @@
     "__resolveType": "navbar"
   },
   "searchbar": {
-    "placeholder": "What are you looking for?",
+    "placeholder": "O que você procura?",
     "loader": {
       "__resolveType": "resolved",
-      "data": null
+      "data": {
+        "__resolveType": "vtex/loaders/intelligentSearch/suggestions.ts",
+        "count": 1
+      }
     }
   },
   "alerts": [
     "<p><strong>Frete grátis:</strong> a partir de R$400 <strong>|</strong></p>",
     "<p><strong>Facilitado:</strong> parcele em até 10x <strong>|</strong></p>",
-    "<p><strong>Pague com PIX</strong> 5% de desconto no PIX</p>"
+    "<p><strong>Pague com PIX</strong> 5% de desconto no PIX <strong>|</strong></p>",
+    "<p><strong>SEGURO </strong>Site protegido com SSL</p>"
   ],
   "variant": "initial",
   "logo": {
-    "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/a19f32ce-7b89-4f62-9e6e-37c0ecec7fc3",
+    "src": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/2d405146-d07a-45e7-b247-43b6dd7df52a",
     "alt": "TAIFF apaixonados por cabelos",
     "width": 108,
     "height": 32

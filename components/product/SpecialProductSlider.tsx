@@ -2,7 +2,7 @@ import { Product } from "apps/commerce/types.ts";
 import { clx } from "../../sdk/clx.ts";
 import Icon from "../ui/Icon.tsx";
 import Slider from "../ui/Slider.tsx";
-import ProductCard from "./ProductCard.tsx";
+import ProductCard from "./SpecialProductCard.tsx";
 import { useId } from "../../sdk/useId.ts";
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
 }
 
 
-function ProductSlider({ products, itemListName }: Props) {
+function SpecialProductSlider({ products, itemListName }: Props) {
 
   const id = useId();
 
@@ -19,28 +19,28 @@ function ProductSlider({ products, itemListName }: Props) {
     <>
       <div
         id={id}
-        class="grid grid-rows-1 relative"
+        class="grid grid-rows-1 relative cy-special-product-shelf"
         style={{
           gridTemplateColumns: "min-content 1fr min-content",
         }}
       >
         <div class="col-start-1 col-span-4 row-start-1 row-span-1">
-          <Slider class="carousel carousel-center sm:carousel-end w-full gap-3 slider-shelf-home full-phone:px-[18px]">
+          <Slider class="carousel carousel-center sm:carousel-end w-full gap-3 slider-shelf-home full-phone:px-0 full-phone:gap-[18px] sm-tablet:max-w-[690px] ">
             {products?.map((product, index) => (
               <Slider.Item
                 index={index}
                 class={clx(
-                  "carousel-item max-w-[290px] border border-gray-12 border-solid ",
-                  "first:pl-5 first:sm:pl-0",
-                  "last:pr-5 last:sm:pr-0",
-                  `cy-product-shelf-item-${index}`
+                  "carousel-item max-w-[846px] sm-tablet:max-w-[690px] full-phone:max-w-full",
+                  "first:pl-5 first:sm:pl-0 full-phone:first:pl-0",
+                  "last:pr-5 last:sm:pr-0 full-phone:last:pr-0",
+                  `cy-special-product-shelf-item-${index}`
                 )}
               >
                 <ProductCard
                   index={index}
                   product={product}
                   itemListName={itemListName}
-                  class="w-[290px] p-2.5"
+                  class="w-[846px] flex-row gap-[60px] p-0 sm-tablet:w-[690px] full-phone:max-w-full full-phone:flex-col full-phone:gap-4 "
                 />
               </Slider.Item>
             ))}
@@ -62,7 +62,7 @@ function ProductSlider({ products, itemListName }: Props) {
           class={clx(
             "col-span-full row-start-5 z-10 mt-5 w-full",
             "carousel justify-center ",
-            "full-phone:mt-6 full-phone:mb-0"
+            "full-phone:mt-6 full-phone:mb-5"
           )}
         >
 
@@ -71,8 +71,8 @@ function ProductSlider({ products, itemListName }: Props) {
               <Slider.Dot
                 index={index}
                 class={clx(
-                  "bg-[#E6E6E6] h-1 w-[30px] -mr-[2px] no-animation rounded-none",
-                  "disabled:w-[30px] disabled:bg-[#515151] disabled:opacity-100 transition-[width] disabled:rounded full-phone:w-[15px]",
+                  "bg-[#E6E6E6] h-1 w-[125px] -mr-[2px] no-animation rounded-none",
+                  "disabled:w-[125px] disabled:bg-[#515151] disabled:opacity-100 transition-[width] disabled:rounded",
                 )}
               >
               </Slider.Dot>
@@ -85,4 +85,4 @@ function ProductSlider({ products, itemListName }: Props) {
   );
 }
 
-export default ProductSlider;
+export default SpecialProductSlider;

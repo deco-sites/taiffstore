@@ -34,10 +34,13 @@
   ],
   "routes": [
     {
-      "__resolveType": "shopify/loaders/proxy.ts",
+      "__resolveType": "vtex/loaders/proxy.ts",
       "extraPathsToProxy": [],
       "includeSiteMap": [],
-      "excludePathsFromDecoSiteMap": []
+      "excludePathsFromDecoSiteMap": [],
+      "includeScriptsToHead": {
+        "includes": []
+      }
     },
     {
       "__resolveType": "website/loaders/pages.ts"
