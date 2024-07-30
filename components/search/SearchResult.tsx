@@ -257,7 +257,7 @@ function Result(props: SectionProps<typeof loader>) {
                     <div class="bg-base-100 flex flex-col h-full divide-y overflow-y-hidden full-tablet:w-[300px] full-tablet:px-4 w-[300px]">
                       <div class="flex justify-between items-center">
                         <h1 class="px-4 py-3">
-                          <span class="font-medium text-2xl">Filters</span>
+                          <span class="text-[16px] font-bold leading-[20px] text-black">Filtrar por</span>
                         </h1>
                         <label class="btn btn-ghost" for={controls}>
                           <Icon id="close" />
