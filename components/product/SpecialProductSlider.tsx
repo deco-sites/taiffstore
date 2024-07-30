@@ -19,7 +19,7 @@ function SpecialProductSlider({ products, itemListName }: Props) {
     <>
       <div
         id={id}
-        class="grid grid-rows-1 relative cy-special-product-shelf"
+        class="grid grid-rows-1  cy-special-product-shelf"
         style={{
           gridTemplateColumns: "min-content 1fr min-content",
         }}
@@ -47,13 +47,13 @@ function SpecialProductSlider({ products, itemListName }: Props) {
           </Slider>
         </div>
 
-        <div class="col-start-1 col-span-1 row-start-1 row-span-1 z-10 self-center absolute left-[-45px] hidden full-desktop:block">
+        <div class="col-start-1 col-span-1 row-start-1 row-span-1 z-10 self-center -translate-x-[15px] left-[0px] hidden full-desktop:block">
           <Slider.PrevButton class="hidden sm:flex disabled:hidden">
             <Icon id="leftArrowShelf" width={20} height={42} />
           </Slider.PrevButton>
         </div>
 
-        <div class="col-start-3 col-span-1 row-start-1 row-span-1 z-10 self-center absolute right-[-45px] hidden full-desktop:block">
+        <div class="col-start-3 col-span-1 row-start-1 row-span-1 z-10 self-center translate-x-[15px] right-[0px] hidden full-desktop:block">
           <Slider.NextButton class="hidden sm:flex disabled:hidden">
             <Icon id="rightArrowShelf" width={20} height={42} />
           </Slider.NextButton>

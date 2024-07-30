@@ -106,9 +106,7 @@ function PageResult(props: SectionProps<typeof loader>) {
       <div
         data-product-list
         class={clx(
-          "grid items-center",
-          "grid-cols-2 gap-2",
-          "sm:grid-cols-4 sm:gap-10",
+          "justify-center items-center flex flex-wrap max-w-[1020px] gap-[15px]",
           "w-full",
         )}
       >
@@ -118,7 +116,7 @@ function PageResult(props: SectionProps<typeof loader>) {
             product={product}
             preload={index === 0}
             index={offset + index}
-            class="h-full min-w-[160px] max-w-[300px]"
+            class="h-full w-[330px] max-w-full p-5 border border-solid border-gray-12 rounded-none full-tablet:w-[255px]"
           />
         ))}
       </div>
@@ -235,7 +233,7 @@ function Result(props: SectionProps<typeof loader>) {
   });
 
   const results = (
-    <span class="text-sm font-normal">
+    <span class="text-sm font-normal hidden">
       {page.pageInfo.recordPerPage} of {page.pageInfo.records} results
     </span>
   );
@@ -250,14 +248,13 @@ function Result(props: SectionProps<typeof loader>) {
         {partial
           ? <PageResult {...props} />
           : (
-            <div class="container flex flex-col gap-4 sm:gap-5 w-full py-4 sm:py-5 px-5 sm:px-0">
-              <Breadcrumb itemListElement={breadcrumb?.itemListElement} />
+            <div class="container flex flex-col gap-4 sm:gap-5 w-full py-0 sm:py-5 px-5 sm:px-0 full-phone:gap-[30px] full-tablet:max-w-full">
 
               {device === "mobile" && (
                 <Drawer
                   id={controls}
                   aside={
-                    <div class="bg-base-100 flex flex-col h-full divide-y overflow-y-hidden">
+                    <div class="bg-base-100 flex flex-col h-full divide-y overflow-y-hidden full-tablet:w-[300px] full-tablet:px-4 w-[300px]">
                       <div class="flex justify-between items-center">
                         <h1 class="px-4 py-3">
                           <span class="font-medium text-2xl">Filters</span>
@@ -272,33 +269,36 @@ function Result(props: SectionProps<typeof loader>) {
                     </div>
                   }
                 >
-                  <div class="flex sm:hidden justify-between items-end">
+                  <div class="flex full-desktop:hidden justify-between items-end full-tablet:justify-center full-tablet:gap-[30px]">
                     <div class="flex flex-col">
                       {results}
                       {sortBy}
                     </div>
-
-                    <label class="btn btn-ghost" for={controls}>
-                      Filters
-                    </label>
+                    <div class="w-[150px] h-[40px] bg-black flex justify-center items-center gap-3 rounded">
+                      <Icon id="filtersWhite" width={21} height={20} />
+                      <label class="text-white text-[13px] font-normal leading-[15.23px]" for={controls}>
+                        Filtrar
+                      </label>
+                      
+                    </div>
                   </div>
                 </Drawer>
               )}
 
-              <div class="grid place-items-center grid-cols-1 sm:grid-cols-[250px_1fr]">
+              <div class="grid-cols-1 sm:grid-cols-[250px_1fr] flex items-start max-w-[1365px] justify-center gap-[15px]">
                 {device === "desktop" && (
-                  <aside class="place-self-start flex flex-col gap-9">
-                    <span class="text-base font-semibold h-12 flex items-center">
-                      Filters
+                  <aside class="place-self-start flex flex-col gap-5 flex-1 border border-solid border-gray-12 rounded-[20px] px-8 py-11 max-w-[330px]">
+                    <span class="text-[16px] font-bold leading-[18.96px] text-left text-black">
+                      Filtrar por
                     </span>
 
                     <Filters filters={filters} />
                   </aside>
                 )}
 
-                <div class="flex flex-col gap-9">
+                <div class="flex flex-col gap-9 relative">
                   {device === "desktop" && (
-                    <div class="flex justify-between items-center">
+                    <div class="absolute right-0 -top-[70px] ">
                       {results}
                       <div>
                         {sortBy}

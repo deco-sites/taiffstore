@@ -65,11 +65,12 @@ function BannerItem(
 				<img class="h-auto max-w-[197px] full-tablet:max-w-[150px]" src={image.icone} alt="" />
 			</div>
 			<div class="flex-[1] flex flex-col gap-5 sm-tablet:max-w-[224px] cy-pinnedBanner-ctaLink ">
+
+				<div class=" text-white text-large font-normal leading-[25px] full-phone:text-big full-phone:leading-[19.36px] full-phone:text-center full-tablet:text-big">
+					{image.conteudo?.textoInfo}
+				</div>
 				<a href={image.conteudo?.ctaLink}>
 
-					<div class=" text-white text-large font-normal leading-[25px] full-phone:text-big full-phone:leading-[19.36px] full-phone:text-center full-tablet:text-big">
-						{image.conteudo?.textoInfo}
-					</div>
 					<div class="bg-white text-[17px] font-bold leading-[21.25px] text-center py-2.5 px-11 rounded-[5px] max-w-[225px] full-phone:absolute full-phone:bottom-[30px] full-phone:left-0 full-phone:right-0 full-phone:mx-auto full-phone:z-10">
 						{image.conteudo?.ctaLabel}
 					</div>

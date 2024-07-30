@@ -36,6 +36,9 @@ export type AvailableIcons =
   | "rightArrowShelf"
   | "leftArrowShelf"
   | "heartShelf"
+  | "chevronRighttWhiteBC"
+  | "upDownArrows"
+  | "filtersWhite"
   | "trash";
 
 interface Props extends JSX.SVGAttributes<SVGSVGElement> {

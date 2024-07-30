@@ -36,7 +36,7 @@ export default function ProductShelf({ products, title, cta }: Props) {
   return (
     <Section.Container
       {...viewItemListEvent}
-      class="[view-transition-name:loading-fallback-2] max-w-[1280px] cy-product-shelf"
+      class="[view-transition-name:loading-fallback-2] max-w-[1345px] cy-product-shelf"
     >
       <Section.Header title={title} cta={cta} />
 

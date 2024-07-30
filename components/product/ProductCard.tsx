@@ -140,9 +140,9 @@ function ProductCard({
         }
       </div>
       <a href={relativeUrl} class="px-[5px]">
-        <span class="text-[15px] font-medium leading-[18.75px] text-left">
+        <div class="text-[15px] font-medium leading-[18.75px] text-left h-[45px]">
           {title}
-        </span>
+        </div>
 
         <div class="flex flex-col pt-3 gap-1 min-h-[78px]">
           {/* {listPrice < price && ( */}
