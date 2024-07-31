@@ -128,14 +128,14 @@ function PageResult(props: SectionProps<typeof loader>) {
               <a
                 rel="next"
                 class={clx(
-                  "btn btn-ghost",
+                  "cursor-pointer",
                   (!nextPageUrl || partial === "hideMore") && "hidden",
                 )}
                 hx-swap="outerHTML show:parent:top"
                 hx-get={partialNext}
               >
-                <span class="inline [.htmx-request_&]:hidden">
-                  Show More
+                <span class="[.htmx-request_&]:hidden text-[16px] font-medium leading-[18.96px] text-center bg-black text-white py-2.5 w-[298px] rounded flex justify-center">
+                  Ver mais +
                 </span>
                 <span class="loading loading-spinner hidden [.htmx-request_&]:block" />
               </a>

@@ -32,15 +32,13 @@ export default function ProductDetails({ page }: Props) {
 
       <div
         class={clx(
-          "container grid",
-          "grid-cols-1 gap-2 py-0",
-          "sm:grid-cols-5 sm:gap-6",
+          "flex justify-center max-w-[1200px] gap-[30px]",
         )}
       >
-        <div class="sm:col-span-3">
+        <div class="justify-center flex max-w-[660px] flex-[1]">
           <ImageGallerySlider page={page} />
         </div>
-        <div class="sm:col-span-2">
+        <div class="flex flex-[1] w-full justify-start ">
           <ProductInfo page={page} />
         </div>
       </div>

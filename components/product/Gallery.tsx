@@ -11,8 +11,8 @@ export interface Props {
   page: ProductDetailsPage | null;
 }
 
-const WIDTH = 820;
-const HEIGHT = 615;
+const WIDTH = 540;
+const HEIGHT = 380;
 const ASPECT_RATIO = `${WIDTH} / ${HEIGHT}`;
 
 /**
@@ -34,22 +34,32 @@ export default function GallerySlider(props: Props) {
   } = props;
 
   return (
-    <>
-      <div id={id} class="flex flex-col sm:flex-row-reverse gap-5">
-        {/* Image Slider */}
-        <div class="relative h-min flex-grow">
-          <Slider class="carousel carousel-center gap-6 w-full">
-            {images.map((img, index) => (
+    <div class="justify-center flex max-w-[660px] flex-[1]">
+      <div
+        id={id}
+        class="flex flex-row-reverse relative gap-[10px]"
+        style={{
+          gridTemplateColumns: "min-content 1fr min-content",
+        }}
+      >
+        <div class="col-start-1 col-span-4 row-start-1 row-span-1 w-[580px]">
+          <Slider class="carousel carousel-center sm:carousel-end  gap-3 slider-shelf-home full-phone:px-0 full-phone:gap-[18px] w-[580px]  ">
+            {images?.map((product, index) => (
               <Slider.Item
                 index={index}
-                class="carousel-item w-full"
+                class={clx(
+                  "carousel-item max-w-[580px] w-full full-phone:max-w-full",
+                  "first:pl-5 first:sm:pl-0 full-phone:first:pl-0",
+                  "last:pr-5 last:sm:pr-0 full-phone:last:pr-0",
+                  `cy-special-product-shelf-item-${index}`
+                )}
               >
                 <Image
-                  class="w-full"
+                  class="w-full px-5"
                   sizes="(max-width: 640px) 100vw, 40vw"
                   style={{ aspectRatio: ASPECT_RATIO }}
-                  src={img.url!}
-                  alt={img.alternateName}
+                  src={product.url!}
+                  alt={product.alternateName}
                   width={WIDTH}
                   height={HEIGHT}
                   // Preload LCP image for better web vitals
@@ -59,28 +69,23 @@ export default function GallerySlider(props: Props) {
               </Slider.Item>
             ))}
           </Slider>
-
-          <Slider.PrevButton
-            class="no-animation absolute left-2 top-1/2 btn btn-circle btn-outline disabled:hidden"
-            disabled
-          >
-            <Icon id="chevron-right" class="rotate-180" />
+        </div>
+        <div class="z-10 self-center left-[80px] hidden full-desktop:block absolute">
+          <Slider.PrevButton class="hidden sm:flex disabled:hidden">
+            <Icon id="leftArrowShelf" width={20} height={42} />
           </Slider.PrevButton>
-
-          <Slider.NextButton
-            class="no-animation absolute right-2 top-1/2 btn btn-circle btn-outline disabled:hidden"
-            disabled={images.length < 2}
-          >
-            <Icon id="chevron-right" />
-          </Slider.NextButton>
-
-          <div class="absolute top-2 right-2 bg-base-100 rounded-full">
-            <label class="btn btn-ghost hidden sm:inline-flex" for={zoomId}>
-              <Icon id="pan_zoom" />
-            </label>
-          </div>
         </div>
 
+        <div class="z-10 self-center right-[0px] hidden full-desktop:block absolute">
+          <Slider.NextButton class="hidden sm:flex disabled:hidden">
+            <Icon id="rightArrowShelf" width={20} height={42} />
+          </Slider.NextButton>
+        </div>
+        <div class="absolute top-2 right-2 bg-base-100 rounded-full">
+          <label class="btn btn-ghost hidden sm:inline-flex" for={zoomId}>
+            <Icon id="pan_zoom" />
+          </label>
+        </div>
         {/* Dots */}
         <ul
           class={clx(
@@ -88,6 +93,7 @@ export default function GallerySlider(props: Props) {
             "sm:carousel-vertical",
             "gap-1 px-4",
             "sm:gap-2 sm:px-0",
+            "!max-h-[600px] w-[70px]"
           )}
           style={{ maxHeight: "600px" }}
         >
@@ -95,10 +101,10 @@ export default function GallerySlider(props: Props) {
             <li class="carousel-item">
               <Slider.Dot index={index}>
                 <Image
-                  style={{ aspectRatio: "1 / 1" }}
+                  style={{ aspectRatio: "71 / 62" }}
                   class="group-disabled:border-base-300 border rounded object-cover"
-                  width={60}
-                  height={60}
+                  width={71}
+                  height={62}
                   src={img.url!}
                   alt={img.alternateName}
                 />
@@ -115,6 +121,6 @@ export default function GallerySlider(props: Props) {
         width={700}
         height={Math.trunc(700 * HEIGHT / WIDTH)}
       />
-    </>
+    </div>
   );
 }
