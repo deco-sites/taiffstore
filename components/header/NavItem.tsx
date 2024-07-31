@@ -5,18 +5,18 @@ import {
   NAVBAR_HEIGHT_DESKTOP,
 } from "../../constants.ts";
 
-function NavItem({ item }: { item: SiteNavigationElement }) {
+function NavItem({ item }: { item: SiteNavigationElement }, index) {
   const { url, name, children } = item;
   const image = item?.image?.[0];
 
   return (
     <li
-      class="group flex items-center pr-5"
+      class={`group flex items-center pr-5 cy-navbar-item cy-navbar-item-${index}`}
       style={{ height: NAVBAR_HEIGHT_DESKTOP }}
     >
       <a
         href={url}
-        class="group-hover:underline text-base/5 font-medium"
+        class="text-bigger font-bold leading-[22.5px]"
       >
         {name}
       </a>
@@ -24,7 +24,7 @@ function NavItem({ item }: { item: SiteNavigationElement }) {
       {children && children.length > 0 &&
         (
           <div
-            class="fixed hidden hover:flex group-hover:flex bg-base-100 z-40 items-start justify-center gap-6 border-t-2 border-b-2 border-base-200 w-screen"
+            class="fixed hidden hover:flex group-hover:flex bg-base-100 z-40 items-start justify-center gap-6 border-t-2 border-b-2 border-base-200 w-full"
             style={{
               top: "0px",
               left: "0px",

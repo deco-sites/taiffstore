@@ -81,7 +81,7 @@
   },
   "/.deco/blocks/pages-category-7493d4326022.json": {
     "name": "Category",
-    "path": "/s",
+    "path": "/*",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
   },
@@ -99,7 +99,7 @@
   },
   "/.deco/blocks/pages-productpage-ce4850591828.json": {
     "name": "Product Page",
-    "path": "/products/:slug",
+    "path": "/:slug/p",
     "blockType": "pages",
     "__resolveType": "website/pages/Page.tsx"
   },
@@ -114,18 +114,6 @@
   "/.deco/blocks/Product%20Card%20Layout%20-%2001.json": {
     "blockType": "loaders",
     "__resolveType": "site/loaders/Layouts/ProductCard.tsx"
-  },
-  "/.deco/blocks/deco-htmx.json": {
-    "blockType": "apps",
-    "__resolveType": "site/apps/deco/htmx.ts"
-  },
-  "/.deco/blocks/deco-analytics.json": {
-    "blockType": "apps",
-    "__resolveType": "site/apps/deco/analytics.ts"
-  },
-  "/.deco/blocks/deco-shopify.json": {
-    "blockType": "apps",
-    "__resolveType": "site/apps/deco/shopify.ts"
   },
   "/.deco/blocks/Deco.json": {
     "blockType": "sections",
@@ -142,5 +130,25 @@
   "/.deco/blocks/deco-vtex.json": {
     "blockType": "apps",
     "__resolveType": "site/apps/deco/vtex.ts"
+  },
+  "/.deco/blocks/deco-htmx.json": {
+    "blockType": "apps",
+    "__resolveType": "site/apps/deco/htmx.ts"
+  },
+  "/.deco/blocks/deco-analytics.json": {
+    "blockType": "apps",
+    "__resolveType": "site/apps/deco/analytics.ts"
+  },
+  "/.deco/blocks/Preview%20site%2Fsections%2FContent%2FBenefits.tsx.json": {
+    "blockType": "sections",
+    "__resolveType": "site/sections/Content/Benefits.tsx"
+  },
+  "/.deco/blocks/Preview%20%2Fsections%2FProduct%2FSpecialProductShelf.tsx.json": {
+    "blockType": "sections",
+    "__resolveType": "site/sections/Product/SpecialProductShelf.tsx"
+  },
+  "/.deco/blocks/Newsletter.json": {
+    "blockType": "sections",
+    "__resolveType": "site/sections/Newsletter/Newsletter.tsx"
   }
 }

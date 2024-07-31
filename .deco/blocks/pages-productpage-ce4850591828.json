@@ -1,6 +1,6 @@
 {
   "name": "Product Page",
-  "path": "/products/:slug",
+  "path": "/:slug/p",
   "default": {
     "possiblePaths": []
   },
@@ -27,17 +27,11 @@
       "title": "You may also like",
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
       "products": {
-        "__resolveType": "shopify/loaders/ProductList.ts",
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
         "props": {
           "sort": "",
-          "query": "a",
-          "count": 9
-        },
-        "filters": {
-          "tags": [],
-          "productTypes": [],
-          "productVendors": [],
-          "variantOptions": []
+          "count": 9,
+          "collection": "138"
         }
       }
     },

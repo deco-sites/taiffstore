@@ -1,0 +1,42 @@
+{
+  "__resolveType": "site/sections/Content/Benefits.tsx",
+  "title": "Conheça as vantagens de comprar na Taiff:",
+  "benefits": [
+    {
+      "label": "FRETE GRATIS",
+      "labelMobile": "FRETE GRÁTIS",
+      "subtitle": "a partir de R$ 400",
+      "subtitleMobile": "a partir de R$ 400",
+      "description": "a partir de R$ 400",
+      "icon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/88c670bf-10c1-427b-9a1a-98059a5b5d49"
+    },
+    {
+      "label": "FACILITADO",
+      "labelMobile": "FACILITADO",
+      "subtitle": "Parcele em até 10x",
+      "subtitleMobile": "Parcele em até 10x",
+      "icon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/a361a463-43db-41c5-b8b3-f40d5b42ade2",
+      "description": "Parcele em até 10x "
+    },
+    {
+      "label": "Pague com PIX",
+      "labelMobile": "Pague com PIX",
+      "subtitle": "5% de desconto no PIX",
+      "subtitleMobile": "5% de desconto no PIX",
+      "icon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/3d9be255-9a91-4da4-a42c-5680f5059deb",
+      "description": "5% de desconto no PIX"
+    },
+    {
+      "label": "SEGURO",
+      "labelMobile": "SEGURO",
+      "subtitle": "Site protegido com SSL",
+      "subtitleMobile": "Site protegido com SSL",
+      "icon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/65769eaa-3915-48e7-928d-907549606795",
+      "description": "Site protegido com SSL"
+    }
+  ],
+  "layout": {
+    "variation": "Simple",
+    "headerAlignment": "center"
+  }
+}

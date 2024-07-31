@@ -13,7 +13,7 @@
         {
           "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/c8d9eeae-bc3f-4d21-8146-264f4df1c984",
           "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/0a953472-5b43-4e9e-9bae-2d24bca540a9",
-          "alt": "valentines",
+          "alt": "Vulcan",
           "action": {
             "href": "#",
             "title": " ",
@@ -22,173 +22,266 @@
           }
         },
         {
-          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/e5b17750-7164-45a5-9d3a-68076ab407db",
-          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/f50d5ec4-c329-44c0-b504-f74155260d41",
-          "alt": "Christmas",
+          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/c8d9eeae-bc3f-4d21-8146-264f4df1c984",
+          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/0a953472-5b43-4e9e-9bae-2d24bca540a9",
+          "alt": "Vulcan II",
           "action": {
-            "title": "Christmas",
-            "subTitle": "New deals for santa!",
             "href": "#",
-            "label": "Enjoy!"
+            "title": " ",
+            "subTitle": " ",
+            "label": " "
           }
+        }
+      ],
+      "preload": true
+    },
+    {
+      "__resolveType": "site/sections/Content/Benefits.tsx",
+      "title": "Conheça as vantagens de comprar na Taiff:",
+      "layout": {
+        "variation": "Simple",
+        "headerAlignment": "center"
+      },
+      "benefits": [
+        {
+          "label": "FRETE GRÁTIS",
+          "labelMobile": "FRETE GRÁTIS",
+          "subtitle": "a partir de R$400",
+          "subtitleMobile": "a partir de R$400",
+          "icon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/51a6bb55-8e0a-4c23-9e08-50b2e69455d1",
+          "description": "a partir de R$400"
+        },
+        {
+          "label": "Facilitado",
+          "labelMobile": "Facilitado",
+          "subtitle": "parcele em até 10x ",
+          "subtitleMobile": "parcele em até 10x ",
+          "icon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/7ce263a0-ea24-410f-974b-a50dc51a2799",
+          "description": "parcele em até 10x "
+        },
+        {
+          "label": "Pague com PIX",
+          "labelMobile": "Pague com PIX",
+          "subtitle": " 5% de desconto no PIX",
+          "subtitleMobile": " 5% de desconto no PIX",
+          "icon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/498979d2-7d5d-4975-8332-fac977f66f03",
+          "description": " 5% de desconto no PIX"
+        },
+        {
+          "label": "SEGURO",
+          "subtitle": " Site protegido com SSL",
+          "subtitleMobile": " Site protegido com SSL",
+          "labelMobile": "SEGURO",
+          "icon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/5a8de434-dea8-4ade-a3c6-976a304b1e4c",
+          "description": "SEGURO"
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Images/ImageGalleryHome.tsx",
+      "mobileBanner1": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/b840f785-e15c-4223-91b6-29104c8f6596",
+      "desktopBanner1": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/86dcfa5c-ccc9-46e2-a56d-a2130a5bf60f",
+      "hrefBanner1": "/",
+      "mobileBanner2": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/0bd0c7b2-1096-4d1c-ab96-41ae3e0eecb2",
+      "desktopBanner2": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/9dc720d6-3a8e-48b9-ab50-e5ec5e2f848e",
+      "hrefBanner2": "/",
+      "mobileBanner3": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/3474f2a3-4161-405c-9fed-9941b80b989f",
+      "desktopBanner3": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/f4adc8ac-eabc-4922-8258-b58fb0cc679c",
+      "hrefBanner3": "/",
+      "mobileBanner4": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/ee067ac0-d640-42b3-b3f9-68ea25a97e20",
+      "desktopBanner4": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/631f35e8-5064-409b-91cd-d934ffc6d4dc",
+      "hrefBanner4": "/",
+      "title": "Categorias",
+      "images": [
+        {
+          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/1dc4d817-8cbe-450a-97a2-f19bedbd3d55",
+          "alt": "Secador",
+          "href": "/"
+        },
+        {
+          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/c86b868f-3504-430b-aeb4-f5088eed2a17",
+          "alt": "Secador",
+          "href": "/"
+        },
+        {
+          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/e2b32203-fdeb-458f-9f79-a52330b89162",
+          "alt": "Secador",
+          "href": "/"
+        },
+        {
+          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/93d118b1-7437-4d9b-b3c5-d9201c1dcbdf",
+          "alt": "Secador",
+          "href": "/"
         }
       ]
     },
     {
       "__resolveType": "site/sections/Product/ProductShelf.tsx",
-      "title": "Make Mom's day",
-      "cta": "/mono",
       "products": {
-        "__resolveType": "shopify/loaders/ProductList.ts",
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
         "props": {
-          "sort": "",
-          "query": "accessories",
+          "collection": "140",
+          "sort": "price:asc",
           "count": 12
-        },
-        "filters": {
-          "tags": [],
-          "productTypes": [],
-          "productVendors": [],
-          "variantOptions": []
         }
-      }
-    },
-    {
-      "__resolveType": "site/sections/Category/CategoryGrid.tsx",
-      "title": "Featured departments",
-      "cta": "/all",
-      "items": [
-        {
-          "label": "Grocery",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/9581289b-7ad3-462b-a680-47678f87c0fc",
-          "href": "/"
-        },
-        {
-          "href": "/",
-          "label": "Home",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/ec749573-4bf4-45d7-ac20-fc66e15cad6e"
-        },
-        {
-          "href": "/",
-          "label": "Furniture",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/d1731f58-3fff-46e6-9165-d4d698c4e199"
-        },
-        {
-          "href": "/",
-          "label": "Toys",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/3a0e5e41-0875-43b9-aaff-27b400c5274c"
-        },
-        {
-          "href": "/",
-          "label": "Electronics",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/4e0b46e9-c5c3-4222-8c9e-4ce98f3d9ad9"
-        },
-        {
-          "href": "/",
-          "label": "Pets",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/edd5d0e2-9e02-4730-bef7-1f1cd750d579"
-        },
-        {
-          "href": "/",
-          "label": "Clothing & Shoes",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/ccb8fefc-3197-45a5-a085-3b6f493d08a0"
-        },
-        {
-          "href": "/",
-          "label": "Baby",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/8afd4bc6-b568-4999-b80d-ef36c78f1153"
-        },
-        {
-          "href": "/",
-          "label": "Sports & Outdoors",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/b81a2f89-0d91-44b6-ac4c-f7f092cf3c46"
-        },
-        {
-          "href": "/",
-          "label": "Beauty",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/6bc77133-8f09-4301-b54e-e4924b51a5c5"
-        },
-        {
-          "href": "/",
-          "label": "Health",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/a9a21762-d617-4b44-8b4f-ec31d36d42f2"
-        },
-        {
-          "href": "/",
-          "label": "Luggage",
-          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/253fc321-0d8c-4f33-8ae6-3ba1ff18c619"
-        }
-      ]
-    },
-    {
-      "__resolveType": "site/sections/Images/Banner.tsx",
-      "title": "Get 40$ off",
-      "description": "<p><span style=\"color: rgb(92, 92, 92);\" data-mce-style=\"color: rgb(92, 92, 92);\">a future qualifying purchase over $40 when approved for a Debit or Credit</span> <span style=\"color: rgb(45, 194, 107);\" data-mce-style=\"color: rgb(45, 194, 107);\">RedCard™</span></p>",
-      "images": {
-        "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/235f846d-8182-45df-8e88-c72d1e08645d",
-        "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/3c800e87-d78d-4179-b4b7-b8b309de3fbe"
       },
-      "cta": {
-        "label": "Apply Now",
-        "href": "#"
+      "title": "Lançamentos"
+    },
+    {
+      "__resolveType": "site/sections/Product/SpecialProductShelf.tsx",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+        "props": {
+          "collection": "144",
+          "sort": "price:desc",
+          "count": 2
+        }
       }
     },
     {
-      "__resolveType": "site/sections/Product/ProductShelfTabbed.tsx",
-      "title": "Hottest Deals",
-      "tabs": [
+      "__resolveType": "site/sections/Content/TextWithImage.tsx",
+      "title": "Crie novos estilos",
+      "subtitle": "Descubra o potencial máximo da inovação Taiff! Explore novas possibilidades com nossas ferramentas de estilo, mergulhando na tecnologia de ponta que redefine a beleza do seu cabelo.",
+      "link": "/",
+      "services": [
         {
-          "products": {
-            "__resolveType": "shopify/loaders/ProductList.ts",
-            "props": {
-              "sort": "",
-              "query": "Shirts",
-              "count": 10
-            },
-            "filters": {
-              "tags": [],
-              "productTypes": [],
-              "productVendors": [],
-              "variantOptions": []
-            }
-          },
-          "title": "Fashion"
+          "label": "Coque baixo cacheado  | Tutorial",
+          "description": "O embaixador Taiff, @ojoaquim, ensina um penteado perfeito para noivas de cabelos cacheados, usando o modelador Curves de 19mm.",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/f898f510-7eb2-441b-8ace-d199c539d6ec",
+          "link": "/"
         },
         {
-          "products": {
-            "__resolveType": "shopify/loaders/ProductList.ts",
-            "props": {
-              "sort": "",
-              "query": "hat and bag",
-              "count": 10
-            },
-            "filters": {
-              "tags": [],
-              "productTypes": [],
-              "productVendors": [],
-              "variantOptions": []
-            }
-          },
-          "title": "Accessories"
+          "label": "Cachos definidos  | Tutorial",
+          "description": "O embaixador Taiff, @ojoaquim, ensina um penteado perfeito para noivas de cabelos cacheados, usando o modelador Curves  de 19mm.",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/13fab3b1-e162-4d0f-8a2f-f8642c8badf8",
+          "link": "/"
         },
         {
-          "products": {
-            "__resolveType": "shopify/loaders/ProductList.ts",
-            "props": {
-              "sort": "",
-              "query": "stickers",
-              "count": 10
-            },
-            "filters": {
-              "tags": [],
-              "productTypes": [],
-              "productVendors": [],
-              "variantOptions": []
-            }
-          },
-          "title": "Stickers"
+          "label": "Penteado romântico  | Tutorial",
+          "description": "O semipreso romântico é perfeito para festas e ocasiões mais formais. Aprenda a fazer no tutorial feito pela embaixadora Taiff, Sonia Lopes.",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/1a18193e-dca8-46e2-8acb-d9abea3a0199",
+          "link": "/"
+        }
+      ],
+      "linkVideo": true,
+      "cards": [
+        {
+          "label": "Coque baixo cacheado  | Tutorial",
+          "description": "O embaixador Taiff, @ojoaquim, ensina um penteado perfeito para noivas de cabelos cacheados, usando o modelador Curves  de 19mm.",
+          "link": "/",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/f898f510-7eb2-441b-8ace-d199c539d6ec"
+        },
+        {
+          "label": "Cachos definidos  | Tutorial",
+          "description": "O embaixador Taiff, @ojoaquim, ensina um penteado perfeito para noivas de cabelos cacheados, usando o modelador Curves  de 19mm.",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/13fab3b1-e162-4d0f-8a2f-f8642c8badf8",
+          "link": "/"
+        },
+        {
+          "label": "Penteado romântico  | Tutorial",
+          "description": "O semipreso romântico é perfeito para festas e ocasiões mais formais. Aprenda a fazer no tutorial feito pela embaixadora Taiff, Sonia Lopes.",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/1a18193e-dca8-46e2-8acb-d9abea3a0199",
+          "link": "/"
         }
       ]
+    },
+    {
+      "__resolveType": "site/sections/Images/PinnedBanner.tsx",
+      "images": [
+        {
+          "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/d1b750d2-fc42-4d4b-8eaa-e6db88f0746e",
+          "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/d34e1461-766c-4ed4-89de-9fb9644fe70d",
+          "alt": "secador",
+          "icone": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/791361ee-1177-4cfe-945e-4313df887ea6",
+          "conteudo": {
+            "textoInfo": "Com 3100W, ele veio para redefinir os limites e foi desenvolvido para profissionais exigentes que buscam máximo desempenho e velocidade, principalmente em processos químicos.",
+            "ctaLink": "/",
+            "ctaLabel": "Saiba mais"
+          },
+          "imgProd": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/f353c830-37f4-4b3c-bdfc-ee470a0c443e",
+          "pins": [
+            {
+              "Y": 20,
+              "X": 28,
+              "caracteristica": "Secagem ultra-rápida"
+            },
+            {
+              "X": 88,
+              "Y": 20,
+              "caracteristica": "Traseira removível magnética"
+            },
+            {
+              "X": 58,
+              "Y": 40,
+              "caracteristica": "Botão jato de ar frio"
+            },
+            {
+              "X": 66,
+              "Y": 75,
+              "caracteristica": "Cabo de 3 metros"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+        "props": {
+          "sort": "price:desc",
+          "collection": "144",
+          "count": 12
+        }
+      },
+      "title": "Mais vendidos"
+    },
+    {
+      "__resolveType": "site/sections/Content/Ambassadors.tsx",
+      "title": "Embaixadores",
+      "subtitle": "Nossos embaixadores são experts em cabelos  e produzem conteúdos especialmente para você.",
+      "cards": [
+        {
+          "label": "Douglas Moura",
+          "description": "Formado pela escola argentina Mercedes Klar,  ele se especializou em corte nas academias Llongueras e Pivot Point em Buenos Aires, Tony&Guy na Itália, e aperfeiçoou suas técnicas de penteados com os Russos Shamuratov Farrukh e Tonya Pushkareva.",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/42ec55fd-c943-4720-a694-6bf98f4a945f",
+          "link": "/",
+          "ctaText": "Saiba mais"
+        },
+        {
+          "label": "Sonia Lopes",
+          "description": "Consolidada como penteadora, fez parte  de diversas academias renomadas do Brasil formando profissionais, não somente  em penteados, como também na formação completa de profissionais cabeleireiros.",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/041d5659-4697-4850-9bfd-664fea54ffed",
+          "link": "/",
+          "ctaText": "Saiba mais"
+        },
+        {
+          "label": "Letícia Rigolim",
+          "description": "Já realizou mais de 3 mil serviços,  entre penteados e maquiagem,  e mais de 400 noivas.",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/22d202aa-5980-46c5-9da9-0b585720092f",
+          "link": "/",
+          "ctaText": "Saiba mais"
+        },
+        {
+          "label": "Charlem Strelow",
+          "description": "Fez cursos com os melhores profissionais de penteados do mundo e já foi instrutor nas melhores escolas profissionalizantes e de aperfeiçoamento. Além disso, ministra cursos, levando suas técnicas e inspirações de penteado por todo o mundo... veja mais",
+          "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/db66e990-68de-4f8e-a92b-1be7963463b2",
+          "link": "/",
+          "ctaText": "Saiba mais"
+        }
+      ]
+    },
+    {
+      "__resolveType": "site/sections/Product/ProductShelf.tsx",
+      "products": {
+        "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+        "props": {
+          "sort": "price:desc",
+          "collection": "144",
+          "count": 12
+        }
+      },
+      "title": "Estrelas da Taiff"
     },
     {
       "__resolveType": "site/sections/Newsletter/Newsletter.tsx",
@@ -205,12 +298,73 @@
       "failed": {
         "title": "Oops!. Something went wrong!",
         "description": "Something went wrong. Please try again. If the problem persists, please contact us."
-      }
+      },
+      "title": "Estilo em Alta: Novidades  Taiff para Você",
+      "description": "Receba dicas exclusivas e ofertas irresistíveis diretamente \nna sua caixa de entrada. \nTransforme sua rotina capilar com a Taiff!",
+      "form": {
+        "helpText": "<p>Concordo que a TAIFF pode usar meus dados&nbsp;de contato e interações. <a data-mce-href=\"../../../politica-de-privacidade\" href=\"../../../politica-de-privacidade\" target=\"_blank\" rel=\"noopener\" data-mce-selected=\"inline-boundary\">Política de privacidade.</a></p>",
+        "buttonText": "Enviar"
+      },
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/4c7736b7-d9cf-46c8-aa11-99ce495c06f4"
     },
     {
       "__resolveType": "Footer"
     }
   ],
   "__resolveType": "website/pages/Page.tsx",
-  "path": "/"
+  "path": "/",
+  "navItems": {
+    "items": [
+      {
+        "children": [],
+        "image": [],
+        "name": "Secadoress",
+        "url": "/secadores"
+      },
+      {
+        "children": [],
+        "image": [],
+        "name": "Escovas Secadoras",
+        "url": "/escovas-secadoras"
+      },
+      {
+        "children": [],
+        "image": [],
+        "name": "Modeladores",
+        "url": "/modeladores"
+      },
+      {
+        "children": [],
+        "image": [],
+        "name": "Chapa",
+        "url": "/chapas"
+      },
+      {
+        "children": [],
+        "image": [],
+        "name": "Chapa",
+        "url": "/chapas"
+      },
+      {
+        "children": [],
+        "image": [],
+        "name": "Chapa",
+        "url": "/chapas"
+      },
+      {
+        "children": [],
+        "image": [],
+        "name": "Acessórios",
+        "url": "/acessorios"
+      },
+      {
+        "children": [],
+        "image": [],
+        "name": "Taiff PRO",
+        "url": "/taiff-pro",
+        "identifier": "highlight"
+      }
+    ],
+    "__resolveType": "commerce/loaders/navbar.ts"
+  }
 }

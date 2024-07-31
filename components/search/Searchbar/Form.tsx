@@ -30,7 +30,7 @@ export interface SearchbarProps {
   /**
    * @title Placeholder
    * @description Search bar default placeholder message
-   * @default What are you looking for?
+   * @default O que está procurando?
    */
   placeholder?: string;
 
@@ -73,30 +73,30 @@ const script = (formId: string, name: string, popupId: string) => {
 const Suggestions = import.meta.resolve("./Suggestions.tsx");
 
 export default function Searchbar(
-  { placeholder = "What are you looking for?", loader }: SearchbarProps,
+  { placeholder = "O que está procurando?", loader }: SearchbarProps,
 ) {
   const slot = useId();
 
   return (
     <div
-      class="w-full grid gap-8 px-4 py-6"
+      class="w-full grid gap-8 pt-[28px] px-[66px] py-[36px] full-phone:px-0 "
       style={{ gridTemplateRows: "min-content auto" }}
     >
-      <form id={SEARCHBAR_INPUT_FORM_ID} action={ACTION} class="join">
+      <form id={SEARCHBAR_INPUT_FORM_ID} action={ACTION} class="join max-w-[677px] border border-black border-solid rounded-[50px] mx-auto w-full full-tablet:max-w-full full-phone:rounded-none full-phone:border-none full-phone:px-2.5">
         <button
           type="submit"
-          class="btn join-item btn-square no-animation"
+          class="btn join-item btn-square no-animation min-h-[40px] h-[40px] !bg-white full-phone:border-t full-phone:border-t-black full-phone:border-solid full-phone:border-b full-phone:border-b-black full-phone:border-l full-phone:border-l-black"
           aria-label="Search"
           for={SEARCHBAR_INPUT_FORM_ID}
           tabIndex={-1}
         >
           <span class="loading loading-spinner loading-xs hidden [.htmx-request_&]:inline" />
-          <Icon id="search" class="inline [.htmx-request_&]:hidden" />
+          <Icon id="searchLensNew" width={15} heigth={15} class="inline [.htmx-request_&]:hidden" />
         </button>
         <input
           autoFocus
           tabIndex={0}
-          class="input input-bordered join-item flex-grow"
+          class="!rounded-[50px] focus:!border-none  focus:!border-transparent border-none input join-item flex-grow h-[40px] text-base font-normal leading-[17.5px] text-gray input-searchbar full-phone:max-w-[270px] full-phone:border-r full-phone:border-solid full-phone:border-black full-phone:!rounded-none full-phone:border-l-0 full-phone:px-0 full-phone:w-[270px] full-phone:border-t full-phone:border-t-black full-phone:border-b full-phone:border-b-black"
           name={NAME}
           placeholder={placeholder}
           autocomplete="off"
@@ -110,7 +110,7 @@ export default function Searchbar(
         />
         <label
           type="button"
-          class="join-item btn btn-ghost btn-square hidden sm:inline-flex no-animation"
+          class="join-item btn btn-ghost btn-square no-animation hidden"
           for={SEARCHBAR_POPUP_ID}
           aria-label="Toggle searchbar"
         >

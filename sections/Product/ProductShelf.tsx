@@ -36,7 +36,7 @@ export default function ProductShelf({ products, title, cta }: Props) {
   return (
     <Section.Container
       {...viewItemListEvent}
-      class="[view-transition-name:loading-fallback-2]"
+      class="[view-transition-name:loading-fallback-2] max-w-[1345px] cy-product-shelf"
     >
       <Section.Header title={title} cta={cta} />
 
@@ -49,7 +49,7 @@ export function LoadingFallback() {
   return (
     <div
       style={{ height: "716px" }}
-      class="flex justify-center items-center [view-transition-name:loading-fallback-2]"
+      class="flex justify-center items-center [view-transition-name:loading-fallback-2] "
     >
       <span class="loading loading-spinner" />
     </div>

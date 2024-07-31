@@ -19,11 +19,11 @@ function Header({ title, cta }: Props) {
   return (
     <div
       class={clx(
-        "flex justify-between items-center gap-2",
+        "flex  items-center gap-2 justify-center",
         "px-5 sm:px-0",
       )}
     >
-      <span class="text-2xl sm:text-3xl font-semibold">{title}</span>
+      <span class="full-phone:text-[24px] full-phone:font-medium full-phone:leading-[30px] full-phone:text-center text-large font-semibold">{title}</span>
       {cta && (
         <a class="text-sm font-medium text-primary" href={cta}>
           See all
@@ -87,14 +87,14 @@ function Container({ class: _class, ...props }: JSX.IntrinsicElements["div"]) {
     <div
       {...props}
       class={clx(
-        "container flex flex-col gap-4 sm:gap-6 w-full py-5 sm:py-10",
+        "container flex flex-col gap-4 sm:gap-6 w-full full-phone:py-5 full-phone:pb-10 sm:py-10 sm-tablet:max-w-[690px] lg-tablet:max-w-full lg-tablet:px-[84px] sm-tablet:px-0 sm-tablet:py-10 ",
         _class?.toString(),
       )}
     />
   );
 }
 
-function Section() {}
+function Section() { }
 
 Section.Container = Container;
 Section.Header = Header;

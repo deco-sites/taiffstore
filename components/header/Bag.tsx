@@ -34,11 +34,11 @@ function Bag() {
       >
         <span
           id={id}
-          class="hidden indicator-item badge badge-primary badge-sm font-thin"
+          class="hidden indicator-item badge badge-primary badge-sm h-[19px] w-[19px] text-black bg-white text-small font-bold leading-[15px] border-none"
         />
 
-        <span class="btn btn-square btn-sm btn-ghost no-animation">
-          <Icon id="shopping_bag" />
+        <span class="btn btn-square btn-sm btn-ghost no-animation cy-icon-minicart">
+          <Icon id="cartNew" width={21} height={24} />
         </span>
       </label>
       <script

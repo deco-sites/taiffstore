@@ -1,51 +1,41 @@
 {
   "items": [
     {
-      "@type": "SiteNavigationElement",
-      "url": "/deals",
-      "name": "Deals",
-      "children": [
-        {
-          "image": [],
-          "children": [],
-          "name": "Hello"
-        },
-        {
-          "image": [],
-          "children": [],
-          "name": "World"
-        }
-      ]
+      "children": [],
+      "image": [],
+      "name": "Secadores",
+      "url": "/secadores"
     },
     {
-      "@type": "SiteNavigationElement",
-      "url": "/valentines-day",
-      "name": "Valentine's Day",
-      "children": []
+      "children": [],
+      "image": [],
+      "name": "Escovas Secadoras",
+      "url": "/escovas-secadoras"
     },
     {
-      "@type": "SiteNavigationElement",
-      "url": "/woman",
-      "name": "Woman",
-      "children": []
+      "children": [],
+      "image": [],
+      "name": "Modeladores",
+      "url": "/modeladores"
     },
     {
-      "@type": "SiteNavigationElement",
-      "url": "/men",
-      "name": "Men",
-      "children": []
+      "children": [],
+      "image": [],
+      "name": "Chapas",
+      "url": "/chapas"
     },
     {
-      "@type": "SiteNavigationElement",
-      "url": "/clearance",
-      "name": "Clearance",
-      "children": []
+      "children": [],
+      "image": [],
+      "name": "Acessórios",
+      "url": "/acessorios"
     },
     {
-      "@type": "SiteNavigationElement",
-      "url": "/activities",
-      "name": "Activities",
-      "children": []
+      "children": [],
+      "image": [],
+      "name": "Taiff PRO",
+      "url": "/taiff-pro",
+      "identifier": "highlight"
     }
   ],
   "__resolveType": "commerce/loaders/navbar.ts"

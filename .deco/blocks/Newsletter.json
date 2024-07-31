@@ -1,0 +1,10 @@
+{
+  "__resolveType": "site/sections/Newsletter/Newsletter.tsx",
+  "title": "Estilo em Alta: Novidades Taiff para Você",
+  "description": "Receba dicas exclusivas e ofertas irresistíveis diretamente na sua caixa de entrada. Transforme sua rotina capilar com a Taiff!",
+  "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/4c7736b7-d9cf-46c8-aa11-99ce495c06f4",
+  "form": {
+    "buttonText": "Enviar",
+    "helpText": "<p>Concordo que a TAIFF pode usar meus dados&nbsp;de contato e interações.&nbsp;<a href=\"../../../politica-de-privacidade\" target=\"_blank\" data-mce-href=\"../../../politica-de-privacidade\" data-mce-selected=\"inline-boundary\">Política de privacidade.</a></p>"
+  }
+}
