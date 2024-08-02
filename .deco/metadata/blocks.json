@@ -115,6 +115,17 @@
     "blockType": "loaders",
     "__resolveType": "site/loaders/Layouts/ProductCard.tsx"
   },
+<<<<<<< HEAD
+=======
+  "/.deco/blocks/deco-htmx.json": {
+    "blockType": "apps",
+    "__resolveType": "site/apps/deco/htmx.ts"
+  },
+  "/.deco/blocks/deco-analytics.json": {
+    "blockType": "apps",
+    "__resolveType": "site/apps/deco/analytics.ts"
+  },
+>>>>>>> 2b24da7fadae36dbd57a3f8c95b837ce2ff2c261
   "/.deco/blocks/Deco.json": {
     "blockType": "sections",
     "__resolveType": "site/sections/Theme/Theme.tsx"
