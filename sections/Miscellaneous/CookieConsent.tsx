@@ -49,7 +49,7 @@ function CookieConsent(
   {
     title = "Cookies",
     text =
-      "Guardamos estatísticas de visitas para melhorar sua experiência de navegação.",
+    "Guardamos estatísticas de visitas para melhorar sua experiência de navegação.",
     policy = {
       text: "Saiba mais sobre sobre política de privacidade",
       link: "/politica-de-privacidade",
@@ -67,7 +67,7 @@ function CookieConsent(
       <div
         id={id}
         class={clx(
-          "transform-gpu translate-y-[200%] transition fixed bottom-0 w-screen z-50 sm:flex",
+          "transform-gpu translate-y-[200%] transition fixed bottom-0 w-full z-50 sm:flex",
           "sm:bottom-2 sm:justify-cente",
         )}
       >

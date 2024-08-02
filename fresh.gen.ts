@@ -3,14 +3,20 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $_app from "./routes/_app.tsx";
-
+import * as $FilterRangePrice from "./islands/FilterRangePrice.tsx";
+import * as $Filters from "./islands/Filters.tsx";
+import * as $Newsletter_Form from "./islands/Newsletter/Form.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
     "./routes/_app.tsx": $_app,
   },
-  islands: {},
+  islands: {
+    "./islands/FilterRangePrice.tsx": $FilterRangePrice,
+    "./islands/Filters.tsx": $Filters,
+    "./islands/Newsletter/Form.tsx": $Newsletter_Form,
+  },
   baseUrl: import.meta.url,
 } satisfies Manifest;
 

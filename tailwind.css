@@ -37,3 +37,193 @@
     --dot-progress: 100%
   }
 }
+
+/* ALERTAS HEADER  */
+
+.alertas-cy-item{
+  p{
+    display: flex;
+    width: max-content;
+    gap: 5px;
+    margin-left: 5px;
+  }
+}
+.animate-alerts {
+  animation: alerts 10s linear infinite;
+}
+@keyframes alerts {
+
+  0% {
+    transform: translateX(105%);
+  }
+
+  100% {
+    transform: translateX(-105%);
+  }
+}
+@media only screen and (min-width:1025px ){
+  .animate-alerts {
+    animation: alerts 20s linear infinite;
+  }
+  @keyframes alerts {
+
+    0% {
+      transform: translateX(315%);
+    }
+  
+    100% {
+      transform: translateX(-105%);
+    }
+  }
+}
+.input-searchbar.input:focus-within{
+  border: none!important;
+  outline: none!important;
+}
+@media only screen and (max-width:639px){
+  .input-searchbar.input:focus-within{
+    border-top: 1px solid black!important;
+    border-bottom: 1px solid black!important;
+    border-right: 1px solid black!important;
+    outline: none!important;
+  }
+}
+/* FIM ALERTAS HEADER */
+
+/* MENU MOBILE  */
+
+.collapse-plus > .collapse-title:after{
+  content: '';
+}
+
+li.highlight{
+  background-color: black;
+  .collapse-title{
+    color: white;
+  }
+}
+
+/* FIM MENU MOBILE  */
+
+/* MINICART */
+.progress::-webkit-progress-value{
+  background: linear-gradient(0deg, #242424, #242424);
+}
+/* FIM MINICART */
+
+/* INFOCARDS */
+.yt-play{
+  position: absolute;
+  top: -20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 94px;
+  height: 102px;
+  background-image: url('/image/yt-play.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* FIM INFOCARDS */
+
+ /* FOOTER MOBILE */
+ .footer-mobile-taiff .collapse-arrow > .collapse-title:after{
+  height: 0.75rem;
+  width: 0.75rem;
+  top: 0px;
+  transform: rotate(-45deg);
+ }
+ .footer-mobile-taiff .collapse-arrow:not(.collapse-close) > input[type="checkbox"]:checked ~ .collapse-title:after{
+  transform: rotate(45deg);
+ }
+/* FIM FOOTER MOBILE */
+
+/* PRATELEIRAS */
+.specifications-cy {
+  height: 28px;
+  margin: 14px 0;
+  width: fit-content;
+}
+/* FIM PRATELEIRAS */
+
+/* PRATELEIRA SPECIAL SHELF */
+.description-special-shelf{
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  white-space: break-spaces;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17.5px;  
+}
+/* FIM PRATELEIRA SPECIAL SHELF */
+
+ /* CATEGORY/SEARCH RESULT */
+.collapse-text{
+  p{
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: center;    
+    color: #3C3C3C;
+    @media only screen and (max-width:639px){
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  h1{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+.select-sort{
+  position: relative;
+  max-height: 32px;
+  height: 32px;
+  min-height: 32px;
+  width: 140px;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+  font-family: Quicksand;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16.25px;
+  color: #000;
+  text-align: center;
+  padding-right: 20px;
+  @media only screen and (max-width:639px){
+    border: 1px solid #000;
+  }
+}
+
+.divisor{
+  margin: 10px 0;
+  height: 1px;
+  width: 100%;
+  background: #F0F0F0;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  outline: none !important;
+  background: transparent;
+  background-image: linear-gradient(to bottom, transparent 0%, transparent 30%, #000000, silver 60%, transparent 60%, transparent 100%);
+}
+ 
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #000000;
+  cursor: pointer;
+  border: 1px solid #000000;
+  border-radius: 100%;
+}

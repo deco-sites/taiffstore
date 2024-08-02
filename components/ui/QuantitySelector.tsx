@@ -2,6 +2,7 @@ import { useScript } from "apps/utils/useScript.ts";
 import { type JSX } from "preact";
 import { clx } from "../../sdk/clx.ts";
 import { useId } from "../../sdk/useId.ts";
+import Icon from "./Icon.tsx";
 
 const onClick = (delta: number) => {
   // doidera!
@@ -19,29 +20,19 @@ function QuantitySelector(
   { id = useId(), disabled, ...props }: JSX.IntrinsicElements["input"],
 ) {
   return (
-    <div class="join border rounded w-full">
+    <div class="join w-full gap-5">
       <button
         type="button"
-        class="btn btn-square btn-ghost no-animation"
+        class="p-0 text-big font-bold"
         hx-on:click={useScript(onClick, -1)}
         disabled={disabled}
       >
-        -
+        <Icon id="minusSign" width={15} height={3} />
       </button>
-      <div
-        data-tip={`Quantity must be between ${props.min} and ${props.max}`}
-        class={clx(
-          "flex-grow join-item",
-          "flex justify-center items-center",
-          "has-[:invalid]:tooltip has-[:invalid]:tooltip-error has-[:invalid]:tooltip-open has-[:invalid]:tooltip-bottom",
-        )}
-      >
+      <div data-tip={`Quantity must be between ${props.min} and ${props.max}`} class="join-item flex justify-center items-center has-[:invalid]:tooltip has-[:invalid]:tooltip-error has-[:invalid]:tooltip-open has-[:invalid]:tooltip-bottom w-5" >
         <input
           id={id}
-          class={clx(
-            "input text-center flex-grow [appearance:textfield]",
-            "invalid:input-error",
-          )}
+          class="input text-center [appearance:textfield] invalid:input-error grow-0 p-0 h-auto w-5  text-big font-bold leading-[18.96px]"
           disabled={disabled}
           inputMode="numeric"
           type="number"
@@ -50,11 +41,11 @@ function QuantitySelector(
       </div>
       <button
         type="button"
-        class="btn btn-square btn-ghost no-animation"
+        class="p-0"
         hx-on:click={useScript(onClick, 1)}
         disabled={disabled}
       >
-        +
+        <Icon id="plusSign" width={15} height={15} />
       </button>
     </div>
   );

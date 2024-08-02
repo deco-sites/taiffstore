@@ -31,27 +31,16 @@ function SignIn({ variant }: { variant: "mobile" | "desktop" }) {
     <div id={id}>
       <a
         class={clx(
-          "btn btn-sm font-thin btn-ghost no-animation",
+          "btn btn-sm font-thin btn-ghost no-animation px-0 cy-icon-login",
           variant === "mobile" && "btn-square",
         )}
         href="/login"
         aria-label="Login"
       >
-        <Icon id="account_circle" />
-        {variant === "desktop" && <span>Sign in</span>}
+        <Icon id="userNew" width={24} height={30} />
+
       </a>
-      <a
-        class={clx(
-          "hidden",
-          "btn btn-sm font-thin btn-ghost no-animation",
-          variant === "mobile" && "btn-square",
-        )}
-        href="/account"
-        aria-label="Account"
-      >
-        <Icon id="account_circle" />
-        {variant === "desktop" && <span>My account</span>}
-      </a>
+
       <script
         type="module"
         dangerouslySetInnerHTML={{ __html: useScript(onLoad, id) }}

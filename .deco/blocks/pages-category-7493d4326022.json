@@ -1,13 +1,17 @@
 {
   "name": "Category",
-  "path": "/s",
+  "path": "/*",
   "default": {
     "possiblePaths": []
   },
   "sections": [
     {
       "jsonLD": {
-        "__resolveType": "PLP Loader"
+        "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+        "sort": "price:desc",
+        "fuzzy": "automatic",
+        "selectedFacets": [],
+        "count": 12
       },
       "__resolveType": "commerce/sections/Seo/SeoPLP.tsx"
     },
@@ -15,9 +19,38 @@
       "__resolveType": "Header"
     },
     {
+      "__resolveType": "site/sections/Category/CategoryBanner.tsx",
+      "banners": [
+        {
+          "image": {
+            "desktop": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/5cd52b49-7606-4d30-a3cb-415d2a001c38",
+            "mobile": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/2788f5d5-6174-46fe-9944-24f2297563b1"
+          },
+          "matcher": "/secadores",
+          "content": {
+            "title": "Secadores",
+            "text": "Nossos secadores são sinônimo de inovação e qualidade. A Taiff sempre esteve em sintonia com as tendências mundiais, alinhando design, ergonomia, potência e alto padrão de qualidade em seus produtos."
+          },
+          "subcategories": [
+            {
+              "label": "Taiff em casa",
+              "link": "/",
+              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/75449eab-d0d0-4d14-84d1-740655c96414"
+            },
+            {
+              "label": "Taiff no salão",
+              "link": "/",
+              "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/10943/131c8b75-ea10-4ffb-9c8b-17318797a342"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "__resolveType": "site/sections/Product/SearchResult.tsx",
       "page": {
-        "__resolveType": "PLP Loader"
+        "__resolveType": "vtex/loaders/intelligentSearch/productListingPage.ts",
+        "count": 12
       },
       "layout": {
         "columns": {
@@ -30,7 +63,7 @@
       "startingPage": 1
     },
     {
-      "__resolveType": "site/sections/Newsletter/Newsletter.tsx"
+      "__resolveType": "Newsletter"
     },
     {
       "__resolveType": "Footer"

@@ -1,0 +1,11 @@
+{
+  "__resolveType": "site/sections/Product/SpecialProductShelf.tsx",
+  "products": {
+    "__resolveType": "vtex/loaders/intelligentSearch/productList.ts",
+    "props": {
+      "sort": "price:desc",
+      "collection": "144",
+      "count": 6
+    }
+  }
+}

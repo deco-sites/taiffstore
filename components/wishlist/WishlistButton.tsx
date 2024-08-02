@@ -65,11 +65,11 @@ function WishlistButton({ item, variant = "full" }: Props) {
         class={clx(
           "btn no-animation",
           variant === "icon"
-            ? "btn-circle btn-ghost btn-sm"
+            ? "bg-transparent hover:bg-transparent border-none shadow-[none] px-0"
             : "btn-primary btn-outline gap-2 w-full",
         )}
       >
-        <Icon id="favorite" class="[.htmx-request_&]:hidden" fill="none" />
+        <Icon id="heartShelf" width={30} height={26} class="[.htmx-request_&]:hidden" fill="none" />
         {variant === "full" && (
           <span class="[.htmx-request_&]:hidden">Add to wishlist</span>
         )}

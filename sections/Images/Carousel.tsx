@@ -48,6 +48,7 @@ export interface Props {
 
 function BannerItem(
   { image, lcp }: { image: Banner; lcp?: boolean },
+  index: number
 ) {
   const {
     alt,
@@ -72,31 +73,9 @@ function BannerItem(
       {...selectPromotionEvent}
       href={action?.href ?? "#"}
       aria-label={action?.label}
-      class="relative block overflow-y-hidden w-full"
+      class={`relative block overflow-y-hidden w-full cy-carousel-banner-item cy-carousel-banner-item-${index}`}
     >
-      {action && (
-        <div
-          class={clx(
-            "absolute h-full w-full top-0 left-0",
-            "flex flex-col justify-center items-center",
-            "px-5 sm:px-0",
-            "sm:left-40 sm:items-start sm:max-w-96",
-          )}
-        >
-          <span class="text-7xl font-bold text-base-100">
-            {action.title}
-          </span>
-          <span class="font-normal text-base text-base-100 pt-4 pb-12">
-            {action.subTitle}
-          </span>
-          <button
-            class="btn btn-primary btn-outline bg-base-100"
-            aria-label={action.label}
-          >
-            {action.label}
-          </button>
-        </div>
-      )}
+
       <Picture preload={lcp} {...viewPromotionEvent}>
         <Source
           media="(max-width: 767px)"
@@ -109,11 +88,11 @@ function BannerItem(
           media="(min-width: 768px)"
           fetchPriority={lcp ? "high" : "auto"}
           src={desktop}
-          width={1440}
-          height={600}
+          width={1920}
+          height={500}
         />
         <img
-          class="object-cover w-full h-full"
+          class="w-full h-full max-h-[500px]"
           loading={lcp ? "eager" : "lazy"}
           src={desktop}
           alt={alt}
@@ -132,43 +111,43 @@ function Carousel({ images = [], preload, interval }: Props) {
       class={clx(
         "grid",
         "grid-rows-[1fr_32px_1fr_64px]",
-        "grid-cols-[32px_1fr_32px] min-h-[660px]",
+        "grid-cols-[32px_1fr_32px]",
         "sm:grid-cols-[112px_1fr_112px] sm:min-h-min",
-        "w-screen",
+        "w-full",
       )}
     >
       <div class="col-span-full row-span-full">
-        <Slider class="carousel carousel-center w-full gap-6">
+        <Slider class="carousel carousel-center w-full gap-6 cy-carousel-banner">
           {images.map((image, index) => (
             <Slider.Item index={index} class="carousel-item w-full">
-              <BannerItem image={image} lcp={index === 0 && preload} />
+              <BannerItem image={image} index={index} lcp={index === 0 && preload} />
             </Slider.Item>
           ))}
         </Slider>
       </div>
 
-      <div class="hidden sm:flex items-center justify-center z-10 col-start-1 row-start-2">
+      <div class="flex items-center justify-center z-10 col-start-1 row-start-2 ml-[18px]">
         <Slider.PrevButton
-          class="btn btn-neutral btn-outline btn-circle no-animation btn-sm"
+          class="btn bg-transparent border-none btn-sm"
           disabled={false}
         >
-          <Icon id="chevron-right" class="rotate-180" />
+          <Icon id="chevronLeftWhite" width={15} height={33} />
         </Slider.PrevButton>
       </div>
 
-      <div class="hidden sm:flex items-center justify-center z-10 col-start-3 row-start-2">
+      <div class="flex items-center justify-center z-10 col-start-3 row-start-2 mr-[18px]">
         <Slider.NextButton
-          class="btn btn-neutral btn-outline btn-circle no-animation btn-sm"
+          class="btn bg-transparent border-none btn-sm"
           disabled={false}
         >
-          <Icon id="chevron-right" />
+          <Icon id="chevronRightWhite" width={15} height={33} />
         </Slider.NextButton>
       </div>
 
       <ul
         class={clx(
-          "col-span-full row-start-4 z-10",
-          "carousel justify-center gap-3",
+          "col-span-full row-start-5 z-10 mt-2",
+          "carousel justify-center",
         )}
       >
         {images.map((_, index) => (
@@ -176,8 +155,8 @@ function Carousel({ images = [], preload, interval }: Props) {
             <Slider.Dot
               index={index}
               class={clx(
-                "bg-black opacity-20 h-3 w-3 no-animation rounded-full",
-                "disabled:w-8 disabled:bg-base-100 disabled:opacity-100 transition-[width]",
+                "bg-gray-2 h-1 w-[60px] no-animation rounded-full",
+                "disabled:w-[60px] disabled:bg-base-100 disabled:opacity-100 transition-[width]",
               )}
             >
             </Slider.Dot>

@@ -1,136 +1,60 @@
-import { SectionProps } from "deco/mod.ts";
-import { AppContext } from "../../apps/site.ts";
-import Icon from "../../components/ui/Icon.tsx";
-import Section from "../../components/ui/Section.tsx";
-import { clx } from "../../sdk/clx.ts";
-import { usePlatform } from "../../sdk/usePlatform.tsx";
-import { useComponent } from "../Component.tsx";
-
-interface NoticeProps {
-  title?: string;
-  description?: string;
-}
+import Form, { Form as FormType } from "../../islands/Newsletter/Form.tsx";
+import type { ImageWidget } from "apps/admin/widgets.ts";
 
 export interface Props {
-  empty?: NoticeProps;
-  success?: NoticeProps;
-  failed?: NoticeProps;
-
-  /** @description Signup label */
-  label?: string;
-
-  /** @description Input placeholder */
-  placeholder?: string;
-
-  /** @hide true */
-  status?: "success" | "failed";
+  title?: string;
+  /** @format textarea */
+  description?: string;
+  image?: ImageWidget;
+  form?: FormType;
 }
 
-export async function action(props: Props, req: Request, ctx: AppContext) {
-  const platform = usePlatform();
+const DEFAULT_PROPS: Props = {
+  title: "Assine nossa newsletter!",
+  description: "Desbrave sabores exclusivos e seja o primeiro a receber dicas e ofertas irresistíveis!",
+  form: {
+    buttonText: "Cadastrar",
+    helpText:
+      'Concordo que a <strong>Cia Muller</strong> pode usar meus dados de contato e interações. <u><a href="/">Política de privacidade</a></u>.',
+  },
+  image: ""
+};
 
-  const form = await req.formData();
-  const email = `${form.get("email") ?? ""}`;
+export default function Newsletter(props: Props) {
+  const { form } = { ...DEFAULT_PROPS, ...props };
 
-  if (platform === "vtex") {
-    // deno-lint-ignore no-explicit-any
-    await (ctx as any).invoke("vtex/actions/newsletter/subscribe.ts", {
-      email,
-    });
-
-    return { ...props, status: "success" };
-  }
-
-  return { ...props, status: "failed" };
-}
-
-export function loader(props: Props) {
-  return { ...props, status: undefined };
-}
-
-function Notice(
-  { title, description }: { title?: string; description?: string },
-) {
   return (
-    <div class="flex flex-col justify-center items-center sm:items-start gap-4">
-      <span class="text-3xl font-semibold text-center sm:text-start">
-        {title}
-      </span>
-      <span class="text-sm font-normal text-base-300 text-center sm:text-start">
-        {description}
-      </span>
+    <div
+      class={`flex flex-col full-phone:pt-0 pt-4 full-phone:pb-0 transition-all cy-newsletter`}
+    >
+      <div class="flex items-center bg-black gap-0 w-full mx-auto full-phone:flex-col lg-tablet:gap-[64px] full-tablet:align-start full-tablet:gap-0 full-tablet:items-start">
+
+        <div class="flex flex-1 xl:min-w-[800px] xl:max-w-[800px] w-full h-full full-tablet:max-w-[420px]  full-phone:min-w-full full-phone:min-h-[180px] ">
+          <img src={props.image} alt="" class="full-phone:object-cover full-tablet:h-[360px] full-tablet:object-cover sm-desktop:h-[260px] sm-desktop:object-cover" />
+        </div>
+        <div class="flex flex-col gap-1 text-center lg:text-left flex-1 text-white full-tablet:py-[32px] full-tablet:pl-[32px] lg-tablet:pr-0 lg-tablet:pr-0 sm-tablet:pr-[32px] full-tablet:max-w-[405px] full-tablet:gap-2.5 full-phone:mt-[25px] full-phone:mb-[18px] full-phone:gap-2.5 full-phone:max-w-full full-phone:w-full ">
+          {props.title && (
+            <h2 class="text-bigger font-bold leading-[22.5px] max-w-[250px] text-center mx-[auto] my-[0] full-tablet:max-w-full full-phone:text-larger  sm-tablet:text-[17px]  full-phone:max-w-full full-phone:px-[42px] ">
+              {props.title}
+            </h2>
+          )}
+          {props.description && (
+            <p class="text-small font-normal leading-[15px] max-w-[250px] text-center mx-[auto] my-[0] full-tablet:max-w-[360px] full-tablet:m-0 full-tablet:py-0 full-tablet:px-[32px] full-tablet:mb-2.5 full-phone:text-base full-phone:leading-[17.5px] full-phone:max-w-full full-phone:px-[30px] lg-tablet:p-0 lg-tablet:max-w-[340px] lg-tablet:mx-auto lg-tablet:my-0">
+              {props.description}
+            </p>
+          )}
+          {form && (
+            <div class="full-tablet:block hidden full-tablet:px-0 full-tablet:py-0 cy-newsletter-form">
+              <Form buttonText={form.buttonText} helpText={form.helpText} />
+            </div>
+          )}
+        </div>
+        {form && (
+          <div class="full-tablet:hidden xl:flex-1 full-phone:w-full">
+            <Form buttonText={form.buttonText} helpText={form.helpText} />
+          </div>
+        )}
+      </div>
     </div>
   );
 }
-
-function Newsletter({
-  empty = {
-    title: "Get top deals, latest trends, and more.",
-    description:
-      "Receive our news and promotions in advance. Enjoy and get 10% off your first purchase. For more information click here.",
-  },
-  success = {
-    title: "Thank you for subscribing!",
-    description:
-      "You’re now signed up to receive the latest news, trends, and exclusive promotions directly to your inbox. Stay tuned!",
-  },
-  failed = {
-    title: "Oops. Something went wrong!",
-    description:
-      "Something went wrong. Please try again. If the problem persists, please contact us.",
-  },
-  label = "Sign up",
-  placeholder = "Enter your email address",
-  status,
-}: SectionProps<typeof loader, typeof action>) {
-  if (status === "success" || status === "failed") {
-    return (
-      <Section.Container class="bg-base-200">
-        <div class="p-14 flex flex-col sm:flex-row items-center justify-center gap-5 sm:gap-10">
-          <Icon
-            size={80}
-            class={clx(
-              status === "success" ? "text-success" : "text-error",
-            )}
-            id={status === "success" ? "check-circle" : "error"}
-          />
-          <Notice {...status === "success" ? success : failed} />
-        </div>
-      </Section.Container>
-    );
-  }
-
-  return (
-    <Section.Container class="bg-base-200">
-      <div class="p-14 grid grid-flow-row sm:grid-cols-2 gap-10 sm:gap-20 place-items-center">
-        <Notice {...empty} />
-
-        <form
-          hx-target="closest section"
-          hx-swap="outerHTML"
-          hx-post={useComponent(import.meta.url)}
-          class="flex flex-col sm:flex-row gap-4 w-full"
-        >
-          <input
-            name="email"
-            class="input input-bordered flex-grow"
-            type="text"
-            placeholder={placeholder}
-          />
-
-          <button
-            class="btn btn-primary"
-            type="submit"
-          >
-            <span class="[.htmx-request_&]:hidden inline">
-              {label}
-            </span>
-            <span class="[.htmx-request_&]:inline hidden loading loading-spinner" />
-          </button>
-        </form>
-      </div>
-    </Section.Container>
-  );
-}
-
-export default Newsletter;
